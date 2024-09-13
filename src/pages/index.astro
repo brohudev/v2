@@ -1,17 +1,23 @@
 ---
-import Background from '../components/Background.astro';
-import NoiseCanvas from '../components/NoiseCanvas.astro';
-import App from '../components/App.astro';
+import About from '../components/About.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro'; // Import Header component
 ---
 
 <html>
-  <head>
-    <title>Your Astro Site</title>
-    <link rel="stylesheet" href="/src/index.css">
-  </head>
-  <body>
-    <Background />
-    <NoiseCanvas />
-    <App />
-  </body>
+<head>
+  <title>My Website</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+</head>
+<body>
+  <Header />  <!-- Use Header component -->
+  <div class="app" id="app">
+    <div class="content">
+      <About />
+      <Footer />
+    </div>
+  </div>
+</body>
 </html>
