@@ -1,23 +1,31 @@
 ---
-import About from '../components/About.astro';
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro'; // Import Header component
+import Layout from '../layouts/Layout.astro';
+import About from '../components/about.astro';
+import Profile from "../components/pfp.astro";
 ---
 
-<html>
-<head>
-  <title>My Website</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-</head>
-<body>
-  <Header />  <!-- Use Header component -->
-  <div class="app" id="app">
-    <div class="content">
-      <About />
-      <Footer />
-    </div>
-  </div>
-</body>
-</html>
+<Layout title="Home | Hitarth Thanki">
+  <main>
+    <Profile />
+    <About />
+  </main>
+</Layout>
+
+
+
+
+
+<!-- 
+<h1>Hitarth Thanki (aka "brohudev")</h1>
+<p>Debugging life, one keystroke at a time</p>
+<nav>
+  <a href="/projects">Projects</a>
+  <a href="/blog">Blog</a>
+  <a href="/experience">Experience</a>
+</nav>
+<div>
+  <a href="mailto:your.email@example.com">Email</a>
+  <a href="/path/to/resume.pdf">Resume</a>
+  <a href="https://github.com/yourusername">Github</a>
+  <a href="https://linkedin.com/in/yourusername">LinkedIn</a>
+</div> -->
