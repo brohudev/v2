@@ -1,0 +1,38 @@
+html, body {
+     font-family: "Poppins", sans-serif;
+     margin: 0;
+     padding: 0;
+ }
+
+ main {
+     display: flex;
+     flex-direction: column;
+     align-content: flex start;
+     align-items: center;
+     width: 100%; /* Ensure the main container takes full width */
+ }
+ .home {
+     display: flex;
+     flex-direction: row;
+     align-content: space-evenly;
+     align-items: center;
+     width: 75%; /* Ensure the main container takes full width */
+ }
+.home-section {
+     padding: 30px;
+ }
+
+.home-section {
+     font-size: 26px;
+     text-align: center;
+     width: 100rem;
+}
+.header {
+     font-size: 26px;
+}
+
+.pfp {
+     font-size: 6px;
+     width: 154px;
+     padding: 5%;
+ }

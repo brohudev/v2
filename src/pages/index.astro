@@ -5,11 +5,19 @@ import Home from '../components/home.astro';
 import Profile from '../components/pfp.astro';
 import Header from '../components/header.astro';
 ---
-
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="description" content="Hitarth Thanki's personal portfolio website">
+     <link rel="icon" href="/hitarth.png" type="image/png">
+     <title>Home | Hitarth Thanki</title>
+</head>
 <Layout title="Home | Hitarth Thanki">
-  <main>
+  <main >
      <Header />
+     <section class="home">
      <Profile />
      <Home />
+     </section>
   </main>
 </Layout>
