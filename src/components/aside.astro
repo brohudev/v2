@@ -1,0 +1,28 @@
+---
+//as an aside here you will assemble all the buttons and everything needed and only expose a nice little aside section.
+---
+<nav class="taskbar">
+    <a href="/" class="taskbar-link">Home</a>
+    <a href="/career" class="taskbar-link">Career</a>
+    <a href="/writing" class="taskbar-link">Writing</a>
+    <a href="/projects" class="taskbar-link">Projects</a>
+</nav>
+
+<style>
+    .taskbar {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+
+    .taskbar-link {
+        text-decoration: none;
+        color: var(--highlight-high);
+        margin: 0.5rem 0;
+        font-size: 1rem;
+    }
+
+    .taskbar-link:hover {
+        text-decoration: underline;
+    }
+</style>
