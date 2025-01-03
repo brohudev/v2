@@ -2,6 +2,7 @@
 //as an aside here you will assemble all the buttons and everything needed and only expose a nice little aside section.
 ---
 <nav class="taskbar">
+    <img src="/hitarth.jpeg"alt="Profile Picture" class="pfp">
     <a href="/" class="taskbar-link">Home</a>
     <a href="/career" class="taskbar-link">Career</a>
     <a href="/writing" class="taskbar-link">Writing</a>
@@ -25,4 +26,12 @@
     .taskbar-link:hover {
         text-decoration: underline;
     }
+.pfp {
+  width: 150px; /* Set the width of the image */
+  height: 150px; /* Set the height of the image */
+  object-fit: cover; /* Ensures the image fits nicely within the box */
+  border-radius: 50%; /* Makes the image circular */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a shadow for depth */
+  border: 2px solid #fff; /* Adds a white border around the image */
+}
 </style>
