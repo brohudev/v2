@@ -1,9 +1,30 @@
 ---
 import Base from '../layouts/base-layout.astro';
+import Footer from '../components/footer.astro';
+import Aside from '../components/aside.astro';
 ---
-<BaseLayout>
-    <h1>Welcome to My Portfolio</h1>
-    <p>Hello, I'm Hitarth! Here's a bit about me, my projects, and writings.</p>
-  <!-- add stuff here this is just me adding boilerplate to set stuff up -->
-</BaseLayout>
+<Base>
+  <section class="home-page">
+
+    <div class="content">
+      <p>Hiya! 👋</p>
+      <p>
+        I’m a <span class="highlight">Computer Science</span> major at the <span class="highlight">University of Houston</span>. 
+        I love Software-Engineering, Cryptography, and Cybersecurity, and I love discussing tech, cars, planes, rockets, cool science topics, and everything in between!
+      </p>
+      <p>
+        I lead <span class="highlight">CodeRed</span> at CougarCS, organizing Houston’s largest hackathon, 
+        and am part of the CougarCS Infosec CTF Team, focusing on cybersecurity challenges and workshops. 
+        I am also the Software Team Lead for Undergraduate Student Instrumentation Project VI (USIP VI), where we build and test balloon-borne experiments.
+      </p>
+      <h3>Tech Stack:</h3>
+      <div class="tech-stack">
+                <span>< insert the tech stack here></span>
+      </div>
+    </div>
+  </section>
+
+</Base>
+
+
 

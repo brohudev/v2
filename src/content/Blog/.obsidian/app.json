@@ -4,5 +4,6 @@
   "strictLineBreaks": false,
   "showLineNumber": true,
   "showInlineTitle": false,
-  "showRibbon": true
+  "showRibbon": true,
+  "showUnsupportedFiles": true
 }

@@ -1,7 +1,11 @@
 ---
 // src/layouts/BaseLayout.astro
 import "../styles/theme.css";
+import Aside from "../components/aside.astro";
+import Footer from "../components/footer.astro";
+import Title from "../components/title.astro";
 ---
+
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
@@ -9,6 +13,9 @@ import "../styles/theme.css";
         <title>Your Website</title>
     </head>
     <body>
+        <Aside /> 
+        <Title />
         <slot />
+        <Footer />
     </body>
 </html>
