@@ -6,3 +6,14 @@ But Serieously, V2 of my portfolio site is built with astro because I wanted to 
 So I will gut pretty much the whole site barring the HTML, and start from there. 
 
 Built, with Love, on Astro
+
+---
+
+
+
+### todo:
+- fix the content for all pages, page by page 
+- fix the styling for all pages, page by page. 
+- add the markdoc capability for the blog
+- add an rss feed. 
+
