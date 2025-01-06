@@ -1,0 +1,42 @@
+/* TODO: change this to the theme as per specs from figma. */
+
+:root {
+    --highlight-high: #f39c12; /* Example highlight color */
+    --background-color: #1e1e1e;
+    --text-color: #ffffff;
+    --card-hover: #333333;
+    --pfp-border-color: #4caf50;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+} 
+
+.card {
+        background-color: var(--background-color);
+        padding: 1rem;
+        border: 1px solid var(--card-hover);
+        border-radius: 8px;
+        margin-bottom: 1rem;
+    }
+
+    .card:hover {
+        background-color: var(--card-hover);
+    }
+
+    /* Page-specific styles */
+    .career {
+        border-left: 4px solid var(--highlight-high);
+    }
+
+    .writing {
+        border-left: 4px solid var(--pfp-border-color);
+    }
+
+    .projects {
+        border-left: 4px solid var(--highlight-high);
+    }
+
