@@ -15,12 +15,19 @@ const { pageName } = Astro.props; //get the correct page name to set. in the tit
         <title>~ | Hitarth Thanki</title>
         <link rel="icon" type="image/x-icon" href="/logo.ico">
     </head>
-    <body class="bg-Base flex flex-col items-center justify-start h-screen">
-        <div class="w-[900px] flex flex-col items-center">
-            <Aside /> 
-            <Title page={pageName}/>
-            <slot />
-            <Footer />
+    <body class="bg-Base flex justify-center items-center h-screen">
+        <!-- Main Container -->
+        <div class="bg-base w-[900px] h-full flex ">
+            <div class="h-full w-[200px] bg-Base">
+                <Aside />
+            </div>
+
+            <div class="flex flex-col items-center flex-1 bg-Base">
+                <Title page={pageName} />
+                <slot />
+            </div>
         </div>
+
+        <Footer /> <!--todo fix the css. this is going to the right of the main container for some reason.-->
     </body>
 </html>
