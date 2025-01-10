@@ -8,11 +8,23 @@
     </div>
 
     <!-- Buttons -->
+    <!-- TODO: move the svg code from seperate files over to here and tie the color to text color for styling.  -->
     <div class="flex flex-col gap-[25px]">
-        <a href="/" class="taskbar-link w-[150px] h-[50px] rounded-[10px] bg-Overlay text-center flex items-center justify-center text-Iris transition-all duration-300 ease-in-out hover:bg-Love hover:text-Overlay">Home</a>
-        <a href="/career" class="taskbar-link w-[150px] h-[50px] rounded-[10px] bg-Overlay text-center flex items-center justify-center text-Iris transition-all duration-300 ease-in-out hover:bg-Pine hover:text-Overlay">Career</a>
-        <a href="/projects" class="taskbar-link w-[150px] h-[50px] rounded-[10px] bg-Overlay text-center flex items-center justify-center text-Iris transition-all duration-300 ease-in-out hover:bg-Gold hover:text-Overlay">Projects</a>
-        <a href="/writing" class="taskbar-link w-[150px] h-[50px] rounded-[10px] bg-Overlay text-center flex items-center justify-center text-Iris transition-all duration-300 ease-in-out hover:bg-Iris hover:text-Overlay">Writing</a>
-        <a href="https://drive.google.com/file/d/1iDhpkBqW4HAw33x2NJlyzSu1HJppktIE/view?usp=sharing" class="taskbar-link w-[150px] h-[50px] rounded-[10px] bg-Overlay text-center flex items-center justify-center text-Rose transition-all duration-300 ease-in-out hover:bg-Rose hover:text-Overlay">Resume</a>
+        <a href="/" class="taskbar-link w-[150px] h-[50px] rounded-[10px] bg-Overlay text-center flex items-center justify-center gap-2 text-Iris transition-all duration-300 ease-in-out hover:bg-Love hover:text-Love">
+            <img src="/home-icon.svg" alt="Home Icon" class="w-[25px] h-[25px]" />
+            <span class="text-[20px] font-normal leading-[20px]">Home</span>
+        </a>
+        <a href="/career" class="taskbar-link w-[150px] h-[50px] rounded-[10px] bg-Overlay text-center flex items-center justify-center gap-2 text-Iris transition-all duration-300 ease-in-out hover:bg-Pine hover:text-Pine">
+            <img src="/career-icon.svg" alt="Career Icon" class="w-[25px] h-[25px]" />
+            <span class="text-[20px] font-normal leading-[20px]">Career</span>
+        </a>
+        <a href="/writing" class="taskbar-link w-[150px] h-[50px] rounded-[10px] bg-Overlay text-center flex items-center justify-center gap-2 text-Iris transition-all duration-300 ease-in-out hover:bg-Iris hover:text-Iris">
+            <img src="/writing-icon.svg" alt="Writing Icon" class="w-[25px] h-[25px]" />
+            <span class="text-[20px] font-normal leading-[20px]">Writing</span>
+        </a>
+        <a href="/projects" class="taskbar-link w-[150px] h-[50px] rounded-[10px] bg-Overlay text-center flex items-center justify-center gap-2 text-Iris transition-all duration-300 ease-in-out hover:bg-Gold hover:text-Gold">
+            <img src="/projects-icon.svg" alt="Projects Icon" class="w-[25px] h-[25px]" />
+            <span class="text-[20px] font-normal leading-[20px]">Projects</span>
+        </a>
     </div>
 </nav>
