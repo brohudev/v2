@@ -16,16 +16,17 @@ const { pageName } = Astro.props; //get the correct page name to set. in the tit
         <link rel="icon" type="image/x-icon" href="/logo.ico">
     </head>
     <body class="bg-Base flex flex-col justify-center items-center h-screen text-Text">
+        <div class="flex w-[900px] h-[150px] bg-Base"> </div>
         <!-- Wrapper Container -->
         <div class="bg-base w-[900px] h-full flex flex-col">
-            <!-- Main Container -->
-            <div class="flex flex-1">
+            <!-- Hero Container -->
+            <div class="flex flex-1 gap-[50px]">
                 <!-- Aside Component -->
-                <div class="h-full w-[200px] bg-Base">
+                <div class="flex flex-col items-end gap-[25px] bg-Base">
                     <Aside />
                 </div>
 
-                <!-- Main Content -->
+                <!-- Main container -->
                 <div class="flex flex-col items-center flex-1 bg-Base">
                     <Title page={pageName} />
                     <slot />
