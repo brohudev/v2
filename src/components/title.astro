@@ -1,11 +1,13 @@
 ---
 interface Props {
     page?: string;
+    color: string; // Accepts a Tailwind-defined color name (e.g., "text-Love")
 }
 
-const { page } = Astro.props;
+const { page, color } = Astro.props;
 const title = page ? `~/HITARTH THANKI/${page}` : "~/HITARTH THANKI";
 ---
-<div class="title-bar">
-    <span class="title-text">{title}</span>
+<div class={`title-bar`}>
+    <span class=`title-text font-[Outfit] text-[36px] font-semibold leading-[20px] text-${color}`>{title}</span>
 </div>
+

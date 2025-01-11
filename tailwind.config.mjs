@@ -21,6 +21,9 @@ export default {
 				HighlightHigh: '#524F67',
 
 			},
+			fontFamily: {
+				outfit: ['Outfit', 'sans-serif'], // Define Outfit as a custom font
+			},
 		},
 	},
 	plugins: [],

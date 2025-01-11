@@ -4,7 +4,7 @@ import Aside from "../components/aside.astro";
 import Footer from "../components/footer.astro";
 import Title from "../components/title.astro";
 
-const { pageName } = Astro.props; //get the correct page name to set. in the title component
+const { pageName, pageColor } = Astro.props; //get the correct page name to set. in the title component
 ---
 
 <html lang="en">
@@ -13,6 +13,10 @@ const { pageName } = Astro.props; //get the correct page name to set. in the tit
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>~ | Hitarth Thanki</title>
         <link rel="icon" type="image/x-icon" href="/logo.ico">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     </head>
     <body class="bg-Base flex flex-col justify-center items-center h-screen text-Text">
         <div class="flex w-[900px] h-[150px] bg-Base"> </div>
@@ -26,8 +30,8 @@ const { pageName } = Astro.props; //get the correct page name to set. in the tit
                 </div>
 
                 <!-- Main container -->
-                <div class="flex flex-col items-center flex-1 bg-Base">
-                    <Title page={pageName} />
+                <div class="flex flex-col items-start gap-[25px] w-[575px]">
+                    <Title page={pageName} color={pageColor} />
                     <slot />
                 </div>
             </div>
