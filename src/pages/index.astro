@@ -5,26 +5,25 @@ import Aside from '../components/aside.astro';
 ---
 <Base pageName="" pageColor="Love">
   <section class="home-page">
-
-    <div class="content">
-      <p>Hiya! 👋</p>
-      <p>
-        I’m a <span class="highlight">Computer Science</span> major at the <span class="highlight">University of Houston</span>. 
+    <div class="content flex flex-col gap-[25px] text-Text font-outfit text-[16px] font-normal leading-[30px]">
+      <p class="h-[25px]"> 
+        Hiya! 👋
+      </p>
+      <p class="h-[95px]">
+        I’m a <span class="text-Love">Computer Science</span> major at the <span class="text-Love">University of Houston</span>. 
         I love Software-Engineering, Cryptography, and Cybersecurity, and I love discussing tech, cars, planes, rockets, cool science topics, and everything in between!
       </p>
-      <p>
-        I lead <span class="highlight">CodeRed</span> at CougarCS, organizing Houston’s largest hackathon, 
+      <p class="height[130px]">
+        I lead <span class="highlight text-Love">CodeRed</span> at CougarCS, organizing Houston’s largest hackathon, 
         and am part of the CougarCS Infosec CTF Team, focusing on cybersecurity challenges and workshops. 
         I am also the Software Team Lead for Undergraduate Student Instrumentation Project VI (USIP VI), where we build and test balloon-borne experiments.
       </p>
-      <h3>Tech Stack:</h3>
-      <div class="tech-stack">
-                <span>< insert the tech stack here></span>
+      <h3 class="text-[20px] font-semibold ">Tech Stack:</h3>
+      <div >
+        <!-- TODO: insert the svgs of the tech stax you want to add to the page -->
+        <span>< insert the tech stack here ></span>
       </div>
     </div>
   </section>
-
 </Base>
-
-
 
