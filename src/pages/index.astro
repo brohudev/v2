@@ -2,6 +2,7 @@
 import Base from '../layouts/base.astro';
 import Footer from '../components/footer.astro';
 import Aside from '../components/aside.astro';
+import Stack from '../components/techstack.astro';
 ---
 <Base pageName="" pageColor="Love">
   <section class="home-page">
@@ -18,12 +19,8 @@ import Aside from '../components/aside.astro';
         and am part of the CougarCS Infosec CTF Team, focusing on cybersecurity challenges and workshops. 
         I am also the Software Team Lead for Undergraduate Student Instrumentation Project VI (USIP VI), where we build and test balloon-borne experiments.
       </p>
-      <h3 class="text-[20px] font-semibold ">Tech Stack:</h3>
-      <div >
-        <!-- TODO: insert the svgs of the tech stax you want to add to the page -->
-        <span>< insert the tech stack here ></span>
-      </div>
+      <h3 class="text-[16px] font-normal ">What I know:</h3>
+      <Stack />
     </div>
   </section>
 </Base>
-
