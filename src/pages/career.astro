@@ -1,8 +1,31 @@
 ---
+import Base from '../layouts/base.astro';
 import Card from '../components/career-card.astro';
-import Base from '../layouts/base.astro'
-//create a list object to render as a bunch of cards.
+const careerFiles = import.meta.glob('../content/career/*.md');
+
+const careers = await Promise.all(
+  Object.entries(careerFiles).map(async ([path, resolver]) => {
+    const { frontmatter, compiledContent } = await resolver();
+    return { 
+      ...frontmatter, 
+      description: await compiledContent(), // Resolve content
+    };
+  })
+);
 ---
+
 <Base pageName="Career" pageColor="text-Pine">
-    <h1>Career</h1>
+  <div class="grid grid-cols-1 gap-[25px]">
+    {careers.map((career) => (
+    <Card 
+        title={career.position} 
+        company={career.company} 
+        start={career.fromDate}
+        end={career.toDate}
+        type={career.careerType}
+        logo={career.icon}
+        description={career.description}
+      />
+    ))}
+  </div>
 </Base>

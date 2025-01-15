@@ -1,9 +1,44 @@
 ---
-// add the customizations for the career card to this boilerplate code.
-const { content, page } = Astro.props;
+const { position, company, fromDate, toDate, careerType, icon} = Astro.props;
+// TODO: style this card.
 ---
-<div class={`card ${page}`}>
-    <article is:raw>{content}</article>
+<div class="group card p-4 rounded-[10px] width-full border border-HighlightMed hover:bg-Base bg-Base flex flex-col gap-2">
+  <div class="flex items-center gap-4">
+    <!-- Icon (SVG) representing the career type -->
+    <div class="w-10 h-10">
+      <img src={icon} alt="career type icon" class="w-full h-full object-contain"/>
+    </div>
+    <div class="flex flex-col">
+      <!-- Position Title -->
+      <h3 class="text-lg font-bold text-HighlightMed group-hover:text-Pine">{position}</h3>
+      <!-- Institution/Company Name -->
+      <p class="text-md text-HighlightMed group-hover:text-Pine">{company}</p>
+    </div>
+  </div>
+
+  <div class="flex justify-between text-HighlightMed group-hover:text-Pine">
+    <!-- Dates -->
+    <span class="text-sm">{fromDate} - {toDate}</span>
+    <!-- Career Type -->
+    <span class="flex items-center gap-2">
+      <span class="text-[12px]">
+        {careerType} <!-- e.g., Uni, Job, Club -->
+      </span>
+    </span>
+  </div>
+
+  <!-- Expandable content section -->
+  <div class="mt-2 text-sm text-HighlightMed group-hover:text-Pine">
+    <article is:raw>{content}</article> <!-- Markdown content will be rendered here -->
+  </div>
+
+  <!-- Bullet Points Section (Initially Hidden) -->
+  <div class="mt-4 text-sm text-HighlightMed group-hover:text-Pine">
+    <ul class="list-disc pl-6 max-h-0 overflow-hidden group-hover:max-h-[1000px] transition-all duration-500 ease-in-out">
+      <!-- Bullet points will be shown when the card is expanded -->
+      <li>Built internal tools for data analysis</li>
+      <li>Automated data pipeline processes</li>
+      <li>Collaborated with cross-functional teams</li>
+    </ul>
+  </div>
 </div>
-
-
