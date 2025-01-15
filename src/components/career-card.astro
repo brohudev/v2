@@ -6,10 +6,10 @@ const { position, company, fromDate, toDate, careerType, icon, description, loca
   <!-- Content Container -->
   <div class="content-container">
     <!-- main content of the card -->
-    <div class="career-card-content">
-      <div class="everything-but-the-group-icon">
+    <div class="career-card-content flex flex-row items-center">
+      <div class="everything-but-the-group-icon flex flex-row items-center">
         <!-- card pfp svg -->
-        <div class="career-card-pfp"> <img src={icon} alt="career type icon" class="w-full h-full object-contain"/> </div>
+        <div class="career-card-pfp h-[50px] w-[50px]"> <img src={icon} alt="career type icon" class="w-[50px] h-[50px]"/> </div>
         <!-- card text -->
         <div class="career-card-text">
           <div class="">{fromDate} - {toDate}</div>
@@ -22,12 +22,12 @@ const { position, company, fromDate, toDate, careerType, icon, description, loca
           </div>
         </div>
       </div>
-      <div class="group-icon"><img src={groupIcon} alt="group type icon" class="w-full h-full object-contain"/></div>
+      <div class=" w-[37px] h-[37px] text-HighlightMed group-hover:text-Pine"><img src={groupIcon} alt="group type icon" class="w-[37px] h-[37px]"/></div>
     </div>
 
     <!-- Bullet Points Section (Initially Hidden) -->
     <div class="mt-4 text-sm text-HighlightMed group-hover:text-Pine list-disc pl-6 max-h-0 overflow-hidden group-hover:max-h-[1000px] transition-all duration-300 ease-in-out">
-    {description}
+      {description}
     </div>
   </div>
 </div>

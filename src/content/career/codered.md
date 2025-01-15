@@ -4,9 +4,9 @@ company: "Cougar Computer Science"
 fromDate: "Jan 2024"
 toDate: "Present"
 careerType: "club"
-icon: ""
+icon: "/career/ccs.svg"
 location: "Houston, Tx"
-groupIcon: "heres the group icon"
+groupIcon: "/career/group/club.svg"
 ---
 
 - Led end-to-end planning, logistics, and sponsor outreach.
