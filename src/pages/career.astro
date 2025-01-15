@@ -15,16 +15,17 @@ const careers = await Promise.all(
 ---
 
 <Base pageName="Career" pageColor="text-Pine">
-  <div class="grid grid-cols-1 gap-[25px]">
+  <div class="w-full grid grid-cols-1 gap-[25px]">
     {careers.map((career) => (
     <Card 
-        title={career.position} 
+        position={career.position} 
         company={career.company} 
-        start={career.fromDate}
-        end={career.toDate}
-        type={career.careerType}
-        logo={career.icon}
+        fromDate={career.fromDate}
+        toDate={career.toDate}
+        careerType={career.careerType}
+        icon={career.icon}
         description={career.description}
+        location={career.location}
       />
     ))}
   </div>

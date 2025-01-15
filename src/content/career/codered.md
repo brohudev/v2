@@ -5,6 +5,7 @@ fromDate: "Jan 2024"
 toDate: "Present"
 careerType: "club"
 icon: ""
+location: "Houston, Tx"
 ---
 
 - Led end-to-end planning, logistics, and sponsor outreach.
