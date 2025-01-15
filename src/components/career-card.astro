@@ -1,5 +1,5 @@
 ---
-const { position, company, fromDate, toDate, careerType, icon, description, location} = Astro.props;
+const { position, company, fromDate, toDate, careerType, icon, description, location, groupIcon} = Astro.props;
 // TODO: style this card.
 ---
 <div class=" group hover:border-Pine rounded-[10px] border border-HighlightMed bg-Base flex p-[13px_25px] flex-col items-start gap-[10px] self-stretch ">
@@ -7,23 +7,27 @@ const { position, company, fromDate, toDate, careerType, icon, description, loca
   <div class="content-container">
     <!-- main content of the card -->
     <div class="career-card-content">
-      <!-- card pfp svg -->
-      <div class="career-card-pfp"> <img src={icon} alt="career type icon" class="w-full h-full object-contain"/>
-      <!-- card text -->
-      <div class="career-card-text">
-        <div class="">{fromDate} - {toDate}</div>
-        <div class="">{position}</div>
-        <div class="">
-          <div class=""> 
-            <div class="">{company}</div> 
-            <div class="">{location}</div>
+      <div class="everything-but-the-group-icon">
+        <!-- card pfp svg -->
+        <div class="career-card-pfp"> <img src={icon} alt="career type icon" class="w-full h-full object-contain"/> </div>
+        <!-- card text -->
+        <div class="career-card-text">
+          <div class="">{fromDate} - {toDate}</div>
+          <div class="">{position}</div>
+          <div class="">
+            <div class=""> 
+              <div class="">{company}</div> 
+              <div class="">{location}</div>
+            </div>
+          </div>
         </div>
       </div>
+      <div class="group-icon"><img src={groupIcon} alt="group type icon" class="w-full h-full object-contain"/></div>
     </div>
-  </div>
 
-  <!-- Bullet Points Section (Initially Hidden) -->
-  <div class="mt-4 text-sm text-HighlightMed group-hover:text-Pine list-disc pl-6 max-h-0 overflow-hidden group-hover:max-h-[1000px] transition-all duration-300 ease-in-out">
+    <!-- Bullet Points Section (Initially Hidden) -->
+    <div class="mt-4 text-sm text-HighlightMed group-hover:text-Pine list-disc pl-6 max-h-0 overflow-hidden group-hover:max-h-[1000px] transition-all duration-300 ease-in-out">
     {description}
+    </div>
   </div>
 </div>

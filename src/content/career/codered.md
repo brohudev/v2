@@ -6,6 +6,7 @@ toDate: "Present"
 careerType: "club"
 icon: ""
 location: "Houston, Tx"
+groupIcon: "heres the group icon"
 ---
 
 - Led end-to-end planning, logistics, and sponsor outreach.
