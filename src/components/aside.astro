@@ -1,5 +1,6 @@
 ---
 //the icon svg code is from Google's material Icons pack avaiable for download on Figma at https://www.figma.com/community/file/1014241558898418245
+import Icon from './icon.astro';
 ---
 <nav class="taskbar flex flex-col items-center">
     <!-- Profile Picture -->
@@ -10,44 +11,24 @@
     <!-- Buttons -->
     <div class="flex flex-col gap-[25px]">
         <a href="/" class="taskbar-link w-[150px] h-[50px] rounded-[10px] bg-Overlay text-center flex items-center justify-center gap-2 text-Iris transition-all duration-300 ease-in-out hover:bg-Love hover:text-Overlay">
-            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g id="home">
-                    <path id="Vector" d="M12.9999 6.94808L18.2083 11.6356V19.771H16.1249V13.521H9.87492V19.771H7.79158V11.6356L12.9999 6.94808ZM12.9999 4.146L2.58325 13.521H5.70825V21.8543H11.9583V15.6043H14.0416V21.8543H20.2916V13.521H23.4166L12.9999 4.146Z" fill="currentColor"/>
-                </g>
-            </svg>
+            <Icon icon="home" className="h-[25px] w-[25px] fill-current" />
             <span class="text-[20px] font-normal leading-[20px]">Home</span>
         </a>
         <a href="/career" class="taskbar-link w-[150px] h-[50px] rounded-[10px] bg-Overlay text-center flex items-center justify-center gap-2 text-Iris transition-all duration-300 ease-in-out hover:bg-Pine hover:text-Overlay">
-            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g id="work_history">
-                    <g id="Vector">
-                        <path d="M4.14583 19.7708V8.3125H20.8125V11.7396C21.5625 11.9688 22.2708 12.3021 22.8958 12.75V8.3125C22.8958 7.15625 21.9688 6.22917 20.8125 6.22917H16.6458V4.14583C16.6458 2.98958 15.7187 2.0625 14.5625 2.0625H10.3958C9.23958 2.0625 8.3125 2.98958 8.3125 4.14583V6.22917H4.14583C2.98958 6.22917 2.07292 7.15625 2.07292 8.3125L2.0625 19.7708C2.0625 20.9271 2.98958 21.8542 4.14583 21.8542H12.1458C11.8333 21.2083 11.625 20.5104 11.5208 19.7708H4.14583ZM10.3958 4.14583H14.5625V6.22917H10.3958V4.14583Z" fill="currentColor"/>
-                        <path d="M18.7292 13.5208C15.8542 13.5208 13.5208 15.8542 13.5208 18.7292C13.5208 21.6042 15.8542 23.9375 18.7292 23.9375C21.6042 23.9375 23.9375 21.6042 23.9375 18.7292C23.9375 15.8542 21.6042 13.5208 18.7292 13.5208ZM20.4479 21.1771L18.2083 18.9375V15.6042H19.25V18.5104L21.1771 20.4375L20.4479 21.1771Z" fill="currentColor"/>
-                    </g>
-                </g>
-            </svg>
+            <Icon icon="career" className="h-[25px] w-[25px] fill-current" />
             <span class="text-[20px] font-normal leading-[20px]">Career</span>
         </a>
            <a href="/projects" class="taskbar-link w-[150px] h-[50px] rounded-[10px] bg-Overlay text-center flex items-center justify-center gap-2 text-Iris transition-all duration-300 ease-in-out hover:bg-Gold hover:text-Overlay">
-            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
-                <g clip-path="url(#clip0_275_137)">
-                    <path d="M21.3333 19.2498C22.4792 19.2498 23.4167 18.3123 23.4167 17.1665V6.74984C23.4167 5.604 22.4792 4.6665 21.3333 4.6665H4.66667C3.52083 4.6665 2.58333 5.604 2.58333 6.74984V17.1665C2.58333 18.3123 3.52083 19.2498 4.66667 19.2498H0.5V21.3332H25.5V19.2498H21.3333ZM4.66667 6.74984H21.3333V17.1665H4.66667V6.74984Z" fill="currentColor"/>
-                </g>
-            </svg>
-
+            <Icon icon="projects" className="h-[25px] w-[25px] fill-current" />
             <span class="text-[20px] font-normal leading-[20px]">Projects</span>
         </a>
         <a href="/writing" class="taskbar-link w-[150px] h-[50px] rounded-[10px] bg-Overlay text-center flex items-center justify-center gap-2 text-Iris transition-all duration-300 ease-in-out hover:bg-Iris hover:text-Overlay">
-            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
-                <path d="M10.6875 4.6665V6.104C9.82292 5.76025 8.89583 5.58317 7.96875 5.58317C6.10417 5.58317 4.23958 6.2915 2.8125 7.71859L6.28125 11.1873H7.4375V12.3436C8.33333 13.2394 9.5 13.7082 10.6771 13.7603V16.1248H7.5625V19.2498C7.5625 20.3957 8.5 21.3332 9.64583 21.3332H20.0625C21.7917 21.3332 23.1875 19.9373 23.1875 18.2082V4.6665H10.6875ZM9.53125 11.3436V9.104H7.15625L6.07292 8.02067C6.66667 7.7915 7.3125 7.6665 7.96875 7.6665C9.36458 7.6665 10.6667 8.20817 11.6562 9.18734L13.125 10.6561L12.9167 10.8644C12.3854 11.3957 11.6771 11.6978 10.9167 11.6978C10.4271 11.6978 9.94792 11.5728 9.53125 11.3436ZM21.1042 18.2082C21.1042 18.7811 20.6354 19.2498 20.0625 19.2498C19.4896 19.2498 19.0208 18.7811 19.0208 18.2082V16.1248H12.7708V13.4269C13.3646 13.1873 13.9167 12.8332 14.3958 12.354L14.6042 12.1457L17.5521 15.0832H19.0208V13.6144L12.7708 7.39567V6.74984H21.1042V18.2082Z" fill="currentColor"/>
-            </svg>
-            <span class="text-[20px] font-normal leading-[20px]">Writing</span>
+           <Icon icon="writing" className="h-[25px] w-[25px] fill-current" />
+           <span class="text-[20px] font-normal leading-[20px]">Writing</span>
         </a>
         <a href="https://raw.githubusercontent.com/brohudev/resume/refs/heads/main/Hitarth%20Thanki.pdf" target="_blank" rel="noopener noreferrer" class="taskbar-link w-[150px] h-[50px] rounded-[10px] bg-Overlay text-center flex items-center justify-center gap-2 text-Rose transition-all duration-300 ease-in-out hover:bg-Rose hover:text-Overlay">
-            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
-  <path d="M20.2917 5.70833V15.0833H15.0833V20.2917H5.70833V5.70833H20.2917ZM20.2917 3.625H5.70833C4.5625 3.625 3.625 4.5625 3.625 5.70833V20.2917C3.625 21.4375 4.5625 22.375 5.70833 22.375H16.125L22.375 16.125V5.70833C22.375 4.5625 21.4375 3.625 20.2917 3.625ZM13 15.0833H7.79167V13H13V15.0833ZM18.2083 10.9167H7.79167V8.83333H18.2083V10.9167Z" fill="currentColor"/>
-</svg>
-            <span class="text-[20px] font-normal leading-[20px]">Resume</span>
+           <Icon icon="resume" className="h-[25px] w-[25px] fill-current" />
+           <span class="text-[20px] font-normal leading-[20px]">Resume</span>
         </a>
     </div>
 </nav>

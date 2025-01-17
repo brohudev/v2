@@ -1,22 +1,22 @@
 ---
 const { position, company, fromDate, toDate, careerType, icon, description, location, groupIcon} = Astro.props;
 // TODO: style this card.
-
+import Icon from './icon.astro';
 ---
 <div class=" group hover:border-Pine rounded-[10px] border border-HighlightMed bg-Base flex p-[13px_25px] flex-col items-start gap-[10px] self-stretch ">
   <!-- Content Container -->
   <div class="content-container">
     <!-- main content of the card -->
-    <div class="career-card-content flex flex-row items-center">
-      <div class="everything-but-the-group-icon flex flex-row items-center">
+    <div class="gropu career-card-content flex justify-between items-center self-stretch flex-row">
+      <div class="everything-but-the-group-icon group flex items-center gap-[25px]">
         <!-- card pfp svg -->
         <div class="career-card-pfp h-[50px] w-[50px] text-HighlightMed group-hover:text-Pine">
-          <!-- TODO: add an astro icon component here: -->
+          <Icon icon=`${icon}` className="h-[50px] w-[50px] fill-current" />
         </div>
         <!-- card text -->
-        <div class="career-card-text">
-          <div class="">{fromDate} - {toDate}</div>
-          <div class="">{position}</div>
+        <div class="career-card-text  text-HighlightMed hover:text-Iris flex flex-col w-[250px] items-start gap-[7px]">
+          <div class="text-Muted font-Outfit text-[16px] font-light leading-[20px] self-stretch">{fromDate} - {toDate}</div>
+          <div class=" ">{position}</div>
           <div class="">
             <div class=""> 
               <div class="">{company}</div> 
@@ -25,7 +25,7 @@ const { position, company, fromDate, toDate, careerType, icon, description, loca
           </div>
         </div>
       </div>
-      <div class=" w-[37px] h-[37px] text-HighlightMed group-hover:text-Pine"><img src={groupIcon} alt="group type icon" class="w-[37px] h-[37px]"/></div>
+      <div class="w-[37px] h-[37px] text-HighlightMed group-hover:text-Pine flex "><Icon icon=`${groupIcon}` className=" w-[37px] h-[37px] fill-current" /></div>
     </div>
 
     <!-- Bullet Points Section (Initially Hidden) -->
