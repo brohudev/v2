@@ -1,6 +1,7 @@
 ---
 const { position, company, fromDate, toDate, careerType, icon, description, location, groupIcon} = Astro.props;
 // TODO: style this card.
+
 ---
 <div class=" group hover:border-Pine rounded-[10px] border border-HighlightMed bg-Base flex p-[13px_25px] flex-col items-start gap-[10px] self-stretch ">
   <!-- Content Container -->
@@ -9,7 +10,9 @@ const { position, company, fromDate, toDate, careerType, icon, description, loca
     <div class="career-card-content flex flex-row items-center">
       <div class="everything-but-the-group-icon flex flex-row items-center">
         <!-- card pfp svg -->
-        <div class="career-card-pfp h-[50px] w-[50px]"> <img src={icon} alt="career type icon" class="w-[50px] h-[50px]"/> </div>
+        <div class="career-card-pfp h-[50px] w-[50px] text-HighlightMed group-hover:text-Pine">
+          <!-- TODO: add an astro icon component here: -->
+        </div>
         <!-- card text -->
         <div class="career-card-text">
           <div class="">{fromDate} - {toDate}</div>
