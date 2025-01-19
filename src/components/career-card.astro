@@ -1,36 +1,39 @@
 ---
 const { position, company, fromDate, toDate, careerType, icon, description, location, groupIcon} = Astro.props;
-// TODO: style this card.
+
 import Icon from './icon.astro';
+import BulletPoints from './career-card-points.astro';
 ---
-<div class=" group hover:border-Pine rounded-[10px] border border-HighlightMed bg-Base flex p-[13px_25px] flex-col items-start gap-[10px] self-stretch ">
+<div class="group hover:border-Pine rounded-xl border border-HighlightMed bg-Base flex px-3.5 py-4 flex-col items-start gap-[10px] self-stretch">
   <!-- Content Container -->
   <div class="content-container">
     <!-- main content of the card -->
-    <div class="gropu career-card-content flex justify-between items-center self-stretch flex-row">
-      <div class="everything-but-the-group-icon group flex items-center gap-[25px]">
+    <div class="group career-card-content flex justify-between items-center self-stretch flex-row">
+      <div class="everything-but-the-group-icon group flex items-center gap-6">
         <!-- card pfp svg -->
         <div class="career-card-pfp h-[50px] w-[50px] text-HighlightMed group-hover:text-Pine">
-          <Icon icon=`${icon}` className="h-[50px] w-[50px] fill-current" />
+          <Icon icon={`${icon}`} className="h-[50px] w-[50px] fill-current" />
         </div>
         <!-- card text -->
-        <div class="career-card-text  text-HighlightMed hover:text-Iris flex flex-col w-[250px] items-start gap-[7px]">
-          <div class="text-Muted font-Outfit text-[16px] font-light leading-[20px] self-stretch">{fromDate} - {toDate}</div>
-          <div class=" ">{position}</div>
-          <div class="">
-            <div class=""> 
-              <div class="">{company}</div> 
-              <div class="">{location}</div>
-            </div>
+        <div class="career-card-text text-HighlightMed group-hover:text-Iris flex flex-col w-[250px] items-start gap-0">
+          <div class="font-Outfit text-[16px] h-5 font-light  self-stretch">
+            {fromDate} - {toDate}
+          </div>
+          <div class="text-HighlightMed text-lg group-hover:text-Pine font-bold">{position}</div>
+          <div class="flex flex-col gap-0">
+            <div class="text-Muted h-5">{company}</div>
+            <div class="text-Subtle h-5">{location}</div>
           </div>
         </div>
       </div>
-      <div class="w-[37px] h-[37px] text-HighlightMed group-hover:text-Pine flex "><Icon icon=`${groupIcon}` className=" w-[37px] h-[37px] fill-current" /></div>
+      <div class="w-[37px] h-[37px] text-HighlightMed group-hover:text-Pine flex">
+        <Icon icon={`${groupIcon}`} className="w-[37px] h-[37px] fill-current" />
+      </div>
     </div>
 
     <!-- Bullet Points Section (Initially Hidden) -->
-    <div class="mt-4 text-sm text-HighlightMed group-hover:text-Pine list-disc pl-6 max-h-0 overflow-hidden group-hover:max-h-[1000px] transition-all duration-300 ease-in-out">
-      {description}
+    <div class="group-hover:mt-4 text-sm text-HighlightMed group-hover:text-Pine list-disc pl-6 max-h-0 overflow-hidden group-hover:max-h-[1000px] transition-all duration-300 ease-in-out"> 
+      <BulletPoints description={description} />
     </div>
   </div>
 </div>

@@ -1,0 +1,24 @@
+---
+import { parse } from 'node-html-parser';
+
+
+function parseHTML(points: string) {
+  const root = parse(points);
+
+  const ul = root.querySelector('ul');
+  const { attributes, innerHTML } = ul;
+
+  return {
+    attributes,
+    innerHTML,
+  };
+}
+
+
+
+const { description } = Astro.props as Props;
+const { attributes: baseAttributes, innerHTML } = parseHTML(description);
+---
+
+<div set:html={innerHTML}>
+</div>
