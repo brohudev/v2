@@ -1,33 +1,34 @@
 ---
-const { title, github, demo, image, technologies, shortDescription } = Astro.props;
+const { title, github, demo, image, technologies, tagline } = Astro.props;
 let expanded = false;
 import Icon from './icon.astro'
 ---
 <!-- Card Container -->
-<div class="group flex h-[150px] p-[15px] flex-col justify-center items-center gap-[10px] flex-shrink-0 self-stretch border border-HighlightMed hover:border-Gold rounded-xl">
+<div class="group transition-all duration-300 ease-in-out flex h-[150px] p-[15px] flex-col justify-center items-center gap-[10px] flex-shrink-0 self-stretch border border-HighlightMed hover:border-Gold rounded-xl">
   <!-- content container -->
   <div class="flex items-center gap-[20px] flex-[1_0_0] self-stretch">
     <!-- pfp container -->
     <div class=""> <img src=`${image}` alt="A cute pfp of the project :D" class="max-w-none w-[120px] h-[120px] rounded-[10px]" /></div>
 
     <!-- deets container -->
-    <div class="deets">
+    <div class="flex w-[350px] flex-col items-start gap-[25px]">
       <!-- text container -->
-      <div class="text">
-        <div class="title">{title}</div>
-        <div class="short description">{shortDescription} </div>
+      <div class="flex h-[70px] flex-col items-center gap-1 self-stretch transition-all duration-300 ease-in-out">
+        <div class="flex h-[21px] flex-col justify-center flex-shrink-0 self-stretch text-Subtle group-hover:text-Gold font-Outfit text-[20px] font-semibold leading-[20px] transition-all duration-300 ease-in-out"> {title} </div>
+        <div class="flex transition-all duration-300 ease-in-out h-[45px] flex-col justify-start self-stretch text-HighlightMed group-hover:text-Iris font-Outfit text-[15px] font-normal leading-[22.5px] text-ellipsis">{tagline}</div>
+
       </div>
       <!-- technologies container -->
-      <div class=""> 
+      <div class="flex flex-row text-Subtle"> {technologies.map((tech) => ( <Icon icon={tech} class="fill-current w-[25px] h-[25px]" /> ))}
       <!-- insert a list of icons here -->
       </div>
     </div>
 
     <!-- gh/demo container -->
-    <div class="text-HighlightMed group-hover:text-Gold flex w-[25px] flex-col justify-center items-center gap-[37px] self-stretch">
+    <div class="transition-all duration-300 ease-in-out text-HighlightMed group-hover:text-Gold flex w-[25px] flex-col justify-center items-center gap-[37px] self-stretch">
       <!-- only show the button if it isnt '' in the metadata: -->
-      <a href="/" title="Live Demo."> <Icon icon="demo" classname="fill-current"/> </a>
-      <a href="/" title="Github Link">  <Icon icon="gh" classname="fill-current" /> </a>
+      <a href="/" title="Live Demo."> <Icon icon="demo" classname="fill-current transition-all duration-300 ease-in-out"/> </a>
+      <a href=`${github}` title="Github Link">  <Icon icon="gh" classname="fill-current transition-all duration-300 ease-in-out" /> </a>
     </div
   </div>
 </div>
