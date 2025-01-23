@@ -11,7 +11,7 @@ Built, with Love, on Astro
 ---
 ## project structure: 
 #### and brief explanations (where necessary)
-.
+```.
 ├── astro.config.mjs
 ├── package.json
 ├── package-lock.json
@@ -50,7 +50,7 @@ Built, with Love, on Astro
 │       └── global.css
 ├── tailwind.config.mjs
 └── tsconfig.json
-
+```
 ### todo:
 - [ ] add markdoc capability for the blog? (dont even know if im gonna need this tbh. vanilla markdown looks like it has everything i need......)
 - [ ] add an rss feed. 
