@@ -3,9 +3,24 @@ const { title, date, time, type} = Astro.props;
 
 import Icon from './icon.astro';
 import BulletPoints from './career-card-points.astro';
-const { content, page } = Astro.props;
 ---
 <!-- main card container -->
-<div class={`card ${page}`}>
-    <article is:raw>{content}</article>
+<div>
+    <!-- card content container -->
+    <div>
+        <!-- title and icon container -->
+        <div>
+            <!-- icon here -->
+            <Icon icon={`${type}`} className="h-[50px] w-[50px] fill-current" />
+            <!-- title div -->
+            <div> </div> 
+        </div>
+        <!-- metadata container -->
+        <div>
+            <!-- date div -->
+            <div> </div>
+            <!-- time div -->
+            <div> </div>
+        </div>
+    </div>
 </div>

@@ -1,7 +1,8 @@
 ---
 import Card from '../components/writing-card.astro';
 import Base from '../layouts/base.astro'
-//create a list object to render as a bunch of cards.
+
+const writingFiles = import.meta.glob('../content/blog/*.md');
 const writings = await Promise.all(
   Object.entries(writingFiles).map(async ([path, resolver]) => {
     const { frontmatter, compiledContent } = await resolver();

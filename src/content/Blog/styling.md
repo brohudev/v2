@@ -1,3 +1,10 @@
+---
+title: "styling"
+date: November, 2024
+time: "5 min"
+type: "blog"
+---
+
 # Heading Level 1
 ## Heading Level 2
 ### Heading Level 3
