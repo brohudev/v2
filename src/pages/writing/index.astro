@@ -1,0 +1,25 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/base.astro';
+import Card from '../../components/writing-card.astro';
+
+const writingPosts = await getCollection('writing');
+const sortedPosts = writingPosts.sort((a, b) => 
+ new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+);
+---
+
+<Base pageName="Writing" pageColor="text-Iris">
+ <div class="w-full grid grid-cols-1 gap-6">
+   {sortedPosts.map((post) => (
+     <a href={`/writing/${post.slug}`} class="block">
+       <Card 
+         title={post.data.title} 
+         date={post.data.date} 
+         time={post.data.time} 
+         type={post.data.type} 
+       />
+     </a>
+   ))}
+ </div>
+</Base>
