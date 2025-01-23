@@ -1,6 +1,11 @@
 ---
+const { title, date, time, type} = Astro.props;
+
+import Icon from './icon.astro';
+import BulletPoints from './career-card-points.astro';
 const { content, page } = Astro.props;
 ---
+<!-- main card container -->
 <div class={`card ${page}`}>
     <article is:raw>{content}</article>
 </div>

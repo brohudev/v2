@@ -2,9 +2,24 @@
 import Card from '../components/writing-card.astro';
 import Base from '../layouts/base.astro'
 //create a list object to render as a bunch of cards.
+const writings = await Promise.all(
+  Object.entries(writingFiles).map(async ([path, resolver]) => {
+    const { frontmatter, compiledContent } = await resolver();
+    return { 
+      ...frontmatter, 
+      description: await compiledContent(), // Resolve content
+    };
+  })
+);
+
 ---
 <Base pageName="Writing" pageColor="text-Iris">
-    <h1>writing stuff goes here</h1>
-<!-- figure this out later Card content={ExampleCard1} page="career" 
-<Card content={ExampleCard2} page="career" />  -->
+    {writings.map((writing) => (
+    <Card 
+        title={writing.title} 
+        date={writing.date} 
+        time={writing.time} 
+        type={writing.type} 
+    />
+    ))}
 </Base>
