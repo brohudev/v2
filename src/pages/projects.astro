@@ -2,19 +2,22 @@
 import Card from '../components/project-card.astro';
 import Base from '../layouts/base.astro';
 
-// Dynamically import all Markdown files in the projects folder
 const projectFiles = import.meta.glob('../content/projects/*.md');
+
 const projects = await Promise.all(
   Object.entries(projectFiles).map(async ([path, resolver]) => {
     const { frontmatter, compiledContent } = await resolver();
     return { 
       ...frontmatter, 
-      description: compiledContent(),
+      description: await compiledContent(), // Resolve content
     };
   })
 );
+
 ---
-<Base pageName="Projects" pageColor="Gold">
+
+<Base pageName="Projects" pageColor="text-Gold">
+  <div class="w-full grid grid-cols-1 gap-[25px]">
     {projects.map((project) => (
       <Card 
         title={project.title}
@@ -25,5 +28,5 @@ const projects = await Promise.all(
         shortDescription={project.shortDescription}
       />
     ))}
+  </div>
 </Base>
-

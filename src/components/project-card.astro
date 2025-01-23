@@ -1,38 +1,33 @@
 ---
-interface Props {
-  title: string;
-  github: string;
-  demo?: string;
-  image: string;
-  technologies: string[];
-  shortDescription: string; // Longer markdown content
-}
-
 const { title, github, demo, image, technologies, shortDescription } = Astro.props;
 let expanded = false;
+import Icon from './icon.astro'
 ---
-<!-- Card div -->
-<div class="group flex items-center  w-full rounded-[10px] outline outline-[1px] outline-HighlightMed hover:outline hover:outline-[1px] hover:outline-Gold bg-Base p-4">
-    <img src={image} alt={`${title} image`} class="w-20 h-20 object-cover rounded-md mr-4"/>
-    <div class="flex flex-col justify-between flex-1">
-      <!-- Add group-hover to the title -->
-      <h2 class="text-lg font-bold text-HighlightMed group-hover:text-Gold">{title}</h2>
-      <div class="flex flex-wrap gap-2 mt-2">
-        <!-- TODO: change this badge to source from an icon repository using the markdown -->
-        {technologies.map((tech) => (
-          <div class="badge bg-Gold text-Base px-2 py-1 rounded"> {tech} </div>
-        ))}
+<!-- Card Container -->
+<div class="group flex h-[150px] p-[15px] flex-col justify-center items-center gap-[10px] flex-shrink-0 self-stretch border border-HighlightMed hover:border-Gold rounded-xl">
+  <!-- content container -->
+  <div class="flex items-center gap-[20px] flex-[1_0_0] self-stretch">
+    <!-- pfp container -->
+    <div class=""> <img src=`${image}` alt="A cute pfp of the project :D" class="max-w-none w-[120px] h-[120px] rounded-[10px]" /></div>
+
+    <!-- deets container -->
+    <div class="deets">
+      <!-- text container -->
+      <div class="text">
+        <div class="title">{title}</div>
+        <div class="short description">{shortDescription} </div>
       </div>
-      <div class=" text-HighlightMed group-hover:text-Iris">{shortDescription}</div>
+      <!-- technologies container -->
+      <div class=""> 
+      <!-- insert a list of icons here -->
+      </div>
     </div>
 
-  <div class="flex justify-between items-center mt-2">
-    <div>
-      <a href={github} target="_blank" class="text-[var(--Gold,#F6C177)] hover:underline"> GitHub </a>
-      {demo && (
-        <a href={demo} target="_blank" class="text-[var(--Gold,#F6C177)] hover:underline ml-4"> Live Demo </a>
-      )}
-    </div>
+    <!-- gh/demo container -->
+    <div class="text-HighlightMed group-hover:text-Gold flex w-[25px] flex-col justify-center items-center gap-[37px] self-stretch">
+      <!-- only show the button if it isnt '' in the metadata: -->
+      <a href="/" title="Live Demo."> <Icon icon="demo" classname="fill-current"/> </a>
+      <a href="/" title="Github Link">  <Icon icon="gh" classname="fill-current" /> </a>
+    </div
   </div>
 </div>
-
