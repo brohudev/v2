@@ -3,9 +3,9 @@ import { defineCollection, z } from 'astro:content';
 const writingCollection = defineCollection({
 	schema: z.object({
 		title: z.string(),
-		date: z.date(),
-		description: z.string().optional(),
-		tags: z.array(z.string()).optional(),
+		date: z.string(),
+		time: z.string(),
+		type: z.string().default('blog'),
 	})
 });
 
