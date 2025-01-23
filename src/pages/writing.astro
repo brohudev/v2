@@ -2,7 +2,7 @@
 import Card from '../components/writing-card.astro';
 import Base from '../layouts/base.astro'
 
-const writingFiles = import.meta.glob('../content/blog/*.md');
+const writingFiles = import.meta.glob('../content/writing/*.md');
 const writings = await Promise.all(
   Object.entries(writingFiles).map(async ([path, resolver]) => {
     const { frontmatter, compiledContent } = await resolver();
@@ -15,6 +15,7 @@ const writings = await Promise.all(
 
 ---
 <Base pageName="Writing" pageColor="text-Iris">
+  <div class="w-full grid grid-cols-1 gap-[25px]">
     {writings.map((writing) => (
     <Card 
         title={writing.title} 
@@ -23,4 +24,5 @@ const writings = await Promise.all(
         type={writing.type} 
     />
     ))}
+  </div>
 </Base>
