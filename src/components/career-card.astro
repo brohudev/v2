@@ -31,9 +31,9 @@ import BulletPoints from './career-card-points.astro';
       </div>
     </div>
 
-    <!-- Bullet Points Section (Initially Hidden) -->
-    <div class="group-hover:mt-4 text-sm text-HighlightMed group-hover:text-Pine list-disc pl-6 max-h-0 overflow-hidden group-hover:max-h-[1000px] transition-all duration-300 ease-in-out"> 
-      <BulletPoints description={description} />
-    </div>
+    <div class="flex group-hover:mt-4 list-outside text-HighlightMed group-hover:text-Pine text-base self-stretch pl-6 max-h-0 overflow-hidden group-hover:max-h-[1000px] transition-all duration-300 ease-in-out">
+      <BulletPoints class="list-outside" description={description} />
+        
+</div>
   </div>
 </div>
