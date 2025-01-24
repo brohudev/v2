@@ -1,8 +1,8 @@
 ---
-title: "My Hackathon Experiences (so far)"
-date: November, 2024
-time: "5 min"
-type: "blog"
+title: My Hackathon Experiences (so far)
+date: 2025-01-24
+time: 5 min
+type: blog
 ---
 
 # My hackathon experiences
@@ -12,4 +12,3 @@ type: "blog"
 - how meta rne hackathon went
 - how the docusign hackathon is going
 - how the tamuhack 2025 is going to go.
-- 

@@ -1,8 +1,8 @@
 ---
-title: "styling"
-date: November, 2024
-time: "5 min"
-type: "blog"
+title: styling
+date: 2025-01-24
+time: 5 min
+type: blog
 ---
 
 # Heading Level 1
@@ -25,7 +25,7 @@ This is a paragraph with **bold text**, *italic text*, and `inline code`.
 
 ## Blockquote
 
-> This is a blockquote. Use it to highlight important text or quotes.
+> This is a blockquote. Use it to highlight important text or quotes, or to leave a note
 
 ## Table
 

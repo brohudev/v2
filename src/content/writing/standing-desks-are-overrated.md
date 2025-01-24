@@ -1,8 +1,8 @@
 ---
-title: "Standing Desks are Overrated"
-date: November, 2024
-time: "5 min"
-type: "blog"
+title: Standing Desks are Overrated
+date: 2025-01-24
+time: 5 min
+type: blog
 ---
 
 # well atleast mine is

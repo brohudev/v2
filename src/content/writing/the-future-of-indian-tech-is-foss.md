@@ -1,8 +1,8 @@
 ---
-title: "the future of indian tech is foss"
-date: November, 2024
-time: "5 min"
-type: "blog"
+title: the future of indian tech is foss
+date: 2025-01-24
+time: 5 min
+type: blog
 ---
 
 - preface is the indian open source controversy

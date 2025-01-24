@@ -1,0 +1,26 @@
+---
+import { getCollection, render, getEntry } from 'astro:content';
+import Base from '../../layouts/base.astro';
+
+
+export async function getStaticPaths() {
+  const writingPosts = await getCollection('writing');
+  
+  return writingPosts.map(writingpost => ({
+    params: { post: writingpost.id },
+    props: { postID: writingpost.id },
+  }));
+}
+
+
+const { post } = Astro.params;
+const { postID } = Astro.props;
+
+const entry = await getEntry('writing', postID);
+
+const { Content, headings, remarkPluginFrontmatter } = await render(entry);
+---
+
+<Base pageName="Writing" pageColor="text-Iris">
+    <Content />
+</Base>

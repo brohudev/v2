@@ -1,8 +1,8 @@
 ---
-title: "How I learned a completely new stack"
-date: January, 2024
-time: "5 min"
-type: "blog"
+title: How I learned a completely new stack
+date: 2025-01-24
+time: 5 min
+type: blog
 ---
 #### old tools:
 - vs code
