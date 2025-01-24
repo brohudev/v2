@@ -52,6 +52,11 @@ Built, with Love, on Astro
 └── tsconfig.json
 ```
 ### todo:
-- [ ] add markdoc capability for the blog? (dont even know if im gonna need this tbh. vanilla markdown looks like it has everything i need......)
 - [ ] add an rss feed. 
+- [ ] improve the styling like how mitchell styled his blog
+- [ ] style for mobile
+- [ ] introduce giscus from this: <https://danidiaztech.com/integrate-astro-giscus/>
 
+### potential new features to consider:
+- [ ] search across blogs: <https://danidiaztech.com/create-astro-search-component/>
+- [ ] tags for blogs and projects to improve seo
