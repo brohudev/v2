@@ -4,10 +4,10 @@ import Aside from "../components/aside.astro";
 import Footer from "../components/footer.astro";
 import Title from "../components/title.astro";
 
-const { pageName, pageColor } = Astro.props; //get the correct page name to set. in the title component
+const { pageName, pageColor } = Astro.props; 
 ---
 
-<html lang="en">
+<html lang="en" class="scroll-smooth">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,25 +18,16 @@ const { pageName, pageColor } = Astro.props; //get the correct page name to set.
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     </head>
-    <body class="bg-Base flex flex-col justify-center items-center h-screen text-Text">
-        <div class="flex w-[900px] h-[150px] bg-Base"> </div>
-        <!-- Wrapper Container -->
-        <div class="bg-base w-[900px] h-full flex flex-col">
-            <!-- Hero Container -->
-            <div class="flex flex-1 justify-center gap-[50px]">
-                <!-- Aside Component -->
-                <div class="flex flex-col items-end gap-[25px] bg-Base">
-                    <Aside />
-                </div>
-
-                <!-- Main container -->
-                <div class="flex flex-col items-start gap-[25px] w-[575px]">
+    <body class="bg-Base text-Text min-h-screen flex flex-col">
+        <!--wrapper -->
+        <div class="max-w-[900px] flex flex-grow flex-col md:flex-row lg:my-32 mx-auto">
+            <!-- Aside Component -->
+            <div class="flex flex-col bg-Base md:w-[200px] flex-shrink-0"> <Aside /> </div>
+            <!-- Main container -->
+                <div class="flex flex-col gap-[25px] w-full md:w-[575px]">
                     <Title page={pageName} Color={pageColor} />
-                    <slot />
+                <div class="flex-grow"><slot /> </div>
+                    <Footer />
                 </div>
-            </div>
-
-            <!-- Footer -->
-            <Footer />
         </div>
     </body></html>
