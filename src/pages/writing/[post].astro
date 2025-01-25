@@ -22,5 +22,27 @@ const { Content, headings, remarkPluginFrontmatter } = await render(entry);
 ---
 
 <Base pageName="Writing" pageColor="text-Iris">
-    <Content />
+    <article >
+        <div class="
+            prose 
+            prose-headings:text-Rose 
+            prose-h1:border-b prose-h1:pb-2 prose-h1:border-overlay
+            prose-h2:text-iris 
+            prose-h3:text-pine 
+            prose-h4:text-gold 
+            prose-p:text-text
+            prose-strong:text-love 
+            prose-em:text-subtle
+            prose-code:bg-overlay prose-code:text-foam prose-code:px-1 prose-code:py-0.5 prose-code:rounded-md
+            prose-pre:bg-base prose-pre:text-text prose-pre:p-4 prose-pre:rounded-lg
+            prose-blockquote:border-l-4 prose-blockquote:border-iris prose-blockquote:pl-4 prose-blockquote:bg-surface prose-blockquote:text-subtle
+            prose-ul:list-disc prose-ul:pl-4
+            prose-ol:list-decimal prose-ol:pl-4
+            prose-table:w-full
+            prose-th:bg-overlay prose-th:text-text prose-th:border prose-th:border-muted
+            prose-td:border prose-td:border-muted
+        ">
+            <Content />
+        </div>
+    </article>
 </Base>
