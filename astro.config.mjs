@@ -12,4 +12,5 @@ export default defineConfig({
     sitemap(),
     tailwind(),
   ],
+  site: "https://hitarth.dev"
 });
