@@ -11,6 +11,13 @@ const icons = {
 const { title, date, time, type} = Astro.props;
 const typeIcon = icons[type] || '❓';
 
+const parsedDate = new Date(date); //the gmt style date is ugly and takes up too much room
+const formattedDate = new Intl.DateTimeFormat('en-US', {
+  month: 'long', // Full month name
+  day: 'numeric', // Numeric day
+  year: 'numeric', // Full year
+}).format(parsedDate);
+
 ---
 <!-- main card container -->
 <div class="group flex flex-col items-start gap-2.5 p-1.5 sm:p-3 rounded-lg border border-Base hover:border hover:border-Iris transition-all ease-in-out duration-300 bg-Base self-stretch">
@@ -21,12 +28,12 @@ const typeIcon = icons[type] || '❓';
             <!-- icon here -->
             <span class="text-[20px] font-semibold leading-[20px]">{typeIcon}</span>
             <!-- title div -->
-            <div class="text-center text-Subtle group-hover:text-Iris transition-all ease-in-out duration-300 text-[20px] font-semibold leading-[20px] font-outfit">{title}</div> 
+            <div class="text-start text-center text-Subtle group-hover:text-Iris transition-all ease-in-out duration-300 text-[20px] font-semibold leading-[20px] font-outfit">{title}</div> 
         </div>
         <!-- metadata container -->
         <div class="flex flex-col items-end">
             <!-- date div -->
-            <div class="text-center group-hover:text-Text transition-all ease-in-out duration-300 text-Subtle text-[15px] font-light leading-[20px] text-text font-outfit">{date}</div>
+            <div class="text-center group-hover:text-Text transition-all ease-in-out duration-300 text-Subtle text-[15px] font-light leading-[20px] text-text font-outfit">{formattedDate}</div>
             <!-- time div -->
             <div class="text-[15px] group-hover:text-Text transition-all ease-in-out duration-300 text-Subtle font-light leading-[20px] text-text font-outfit">{time}</div>
         </div>

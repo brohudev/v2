@@ -1,6 +1,6 @@
 ---
 title: styling
-date: 2025-01-24
+date: 2025-01-01
 time: 5 min
 type: blog
 ---
