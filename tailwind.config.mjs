@@ -16,7 +16,7 @@ export default {
 				Rose: '#EBBCBA',
 				Pine: '#31748F',
 				Foam: '#9CCFD8',
-				HighlightLow: '#9CCFD8',
+				HighlightLow: '#21202e',
 				HighlightMed: '#403D52',
 				HighlightHigh: '#524F67',
 

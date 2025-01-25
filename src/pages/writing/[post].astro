@@ -2,7 +2,6 @@
 import { getCollection, render, getEntry } from 'astro:content';
 import Base from '../../layouts/base.astro';
 
-
 export async function getStaticPaths() {
   const writingPosts = await getCollection('writing');
   
@@ -12,37 +11,92 @@ export async function getStaticPaths() {
   }));
 }
 
-
 const { post } = Astro.params;
 const { postID } = Astro.props;
 
 const entry = await getEntry('writing', postID);
 
 const { Content, headings, remarkPluginFrontmatter } = await render(entry);
+const icons = {
+ tech: '🧑‍💻',
+ writeup: '📄',
+ blog: '🖋️',
+};
+
+const typeIcon = icons[entry.data.type] || '❓';
+const parsedDate = new Date(entry.data.date);
+const formattedDate = new Intl.DateTimeFormat('en-US', {
+ month: 'long',
+ day: 'numeric',
+ year: 'numeric',
+}).format(parsedDate);
+
 ---
 
 <Base pageName="Writing" pageColor="text-Iris">
-    <article >
-        <div class="
-            prose 
-            prose-headings:text-Rose 
-            prose-h1:border-b prose-h1:pb-2 prose-h1:border-overlay
-            prose-h2:text-iris 
-            prose-h3:text-pine 
-            prose-h4:text-gold 
-            prose-p:text-text
-            prose-strong:text-love 
-            prose-em:text-subtle
-            prose-code:bg-overlay prose-code:text-foam prose-code:px-1 prose-code:py-0.5 prose-code:rounded-md
-            prose-pre:bg-base prose-pre:text-text prose-pre:p-4 prose-pre:rounded-lg
-            prose-blockquote:border-l-4 prose-blockquote:border-iris prose-blockquote:pl-4 prose-blockquote:bg-surface prose-blockquote:text-subtle
-            prose-ul:list-disc prose-ul:pl-4
-            prose-ol:list-decimal prose-ol:pl-4
-            prose-table:w-full
-            prose-th:bg-overlay prose-th:text-text prose-th:border prose-th:border-muted
-            prose-td:border prose-td:border-muted
-        ">
-            <Content />
+    <div class="flex justify-between items-center self-stretch -mt-2">
+        <!-- title and icon container -->
+        <div class="flex items-center gap-6">
+            <!-- icon here -->
+            <span class="text-2xl leading-[20px]">{typeIcon}</span>
+            <!-- title div -->
+            <div class="text-start text-Rose text-2xl font-semibold leading-xl font-outfit">{entry.data.title}</div>
         </div>
-    </article>
-</Base>
+        <!-- metadata container -->
+        <div class="flex flex-col items-end">
+            <!-- date div -->
+            <div class="text-Text text-[15px] font-light leading-[20px] font-outfit">{formattedDate}</div>
+            <!-- time div -->
+            <div class="text-[15px] text-Text font-light leading-[20px]  font-outfit">{entry.data.time}</div>
+        </div>
+    </div>
+    <div class="w-[95%] mx-auto my-4 h-[1px] bg-HighlightMed"></div>
+  <article class="prose max-w-full 
+    prose-h2:text-Love 
+    prose-h3:text-Pine 
+    prose-h4:text-Gold 
+    prose-h5:text-Subtle 
+    prose-h6:text-Muted
+
+    prose-a:text-Gold 
+    prose-a:no-underline 
+    hover:prose-a:underline
+    prose-code:bg-HighlightLow
+    prose-code:text-Subtle 
+    prose-pre:bg-Base 
+    prose-pre:text-Text
+    prose-table:border 
+    prose-table:border-Muted
+    prose-th:border 
+    prose-th:border-HighlightMed
+    prose-th:font-bold 
+    prose-td:border 
+    prose-td:border-HighlightMed
+    prose-table:rounded
+    prose-strong:text-Iris
+    prose-em:text-Text
+    prose-p:text-Text
+    prose-ul:text-Text
+    prose-ol:text-Text
+    prose-table:text-Text
+    prose-th:text-Text
+    
+    prose-table:w-auto 
+    prose-table:table-auto 
+    prose-th:p-2 
+    prose-th:whitespace-nowrap 
+    prose-th:overflow-hidden 
+    prose-th:max-w-[250px] 
+    prose-th:text-ellipsis 
+    prose-td:p-2 
+    prose-td:whitespace-nowrap 
+    prose-td:overflow-hidden 
+    prose-td:max-w-[250px] 
+    prose-td:text-ellipsis 
+    prose-td:break-words
+
+
+    prose-ul:list-disc
+    prose-ol:list-decimal ">
+        <Content />
+    </article></Base>

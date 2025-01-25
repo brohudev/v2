@@ -4,10 +4,9 @@ date: 2025-01-01
 time: 5 min
 type: blog
 ---
-
-# Heading Level 1
 ## Heading Level 2
 ### Heading Level 3
+#### Heading level 4
 
 This is a paragraph with **bold text**, *italic text*, and `inline code`.
 
@@ -30,9 +29,10 @@ This is a paragraph with **bold text**, *italic text*, and `inline code`.
 ## Table
 
 | Column 1   | Column 2   | Column 3   |
-|------------|------------|------------|
+| ---------- | ---------- | ---------- |
 | Row 1 Col1 | Row 1 Col2 | Row 1 Col3 |
 | Row 2 Col1 | Row 2 Col2 | Row 2 Col3 |
+
 
 ## Code Block
 
