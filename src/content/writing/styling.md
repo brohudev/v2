@@ -4,6 +4,7 @@ date: 2025-01-25
 time: 5 min
 type: blog
 ---
+I am using this blog post to adjust the styling on my site to match the obsidian Rose Pine plugin theme. (please look at the [source code](https://github.com/brohudev/v2/blob/main/src/pages/writing/%5Bpost%5D.astro) for the slug of this page to see the styles, and yes they are in Tailwind. Come fight me.)
 ## Heading Level 2
 ### Heading Level 3
 #### Heading level 4
