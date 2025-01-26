@@ -47,7 +47,7 @@ Built, with Love, on Astro
 - [ ] add an rss feed. 
 - [ ] style for mobile
 - [ ] introduce giscus from this: <https://danidiaztech.com/integrate-astro-giscus/>
-
+- [ ] move over the hire me card to its own component since it has a lot of specific design it needs to take care of 
 ### potential new features to consider:
 - [ ] search across blogs: <https://danidiaztech.com/create-astro-search-component/>
 - [ ] tags for blogs and projects to improve seo
