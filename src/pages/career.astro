@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/base.astro';
 import Card from '../components/career-card.astro';
+import HireMe from '../components/hireme.astro';
 const careerFiles = import.meta.glob('../content/career/*.md');
 
 const careers = await Promise.all(
@@ -15,13 +16,7 @@ const careers = await Promise.all(
 ---
 
 <Base pageName="Career" pageColor="text-Pine">
-  <!--<div class="w-full grid grid-cols-1 gap-[25px]">-->
-  <!--  <Card position="Want to Hire Me?" company="<Your Company>" -->
-   <!--      fromDate="<Today>"          toDate="<Long into the future>"-->
-    <!--      careerType="work"           icon="job"-->
-    <!--      description=""              location="<Your Office>"-->
-    <!--      groupIcon="work" />-->
-    <!---->
+  <HireMe />
     {careers.map((career) => (
     <Card 
         position={career.position} 
@@ -35,5 +30,4 @@ const careers = await Promise.all(
         groupIcon={career.groupIcon}
       />
     ))}
-  </div>
 </Base>
