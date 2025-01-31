@@ -19,6 +19,28 @@ V2 of my portfolio site, built with [Astro](https://astro.build/) to incorporate
     ├── styles     # Global styles
 ```
 
+## 🛠 Installation & Running  
+
+### Prerequisites  
+- [Node.js](https://nodejs.org/) (LTS recommended)  
+- [PNPM](https://pnpm.io/) (or use npm/yarn)  
+
+### Steps  
+1. Clone the repository:  
+   ```sh
+   git clone https://github.com/your-username/portfolio-v2.git
+   cd portfolio-v2
+   ```  
+2. Install dependencies:  
+   ```sh
+   npm install
+   ```  
+3. Run the development server:  
+   ```sh
+   npm run dev
+   ```  
+4. Open [http://localhost:4321](http://localhost:4321) in your browser.  
+
 ## ✅ TODO  
 - [ ] Add an RSS feed  
 - [ ] Improve mobile styling  
@@ -30,4 +52,4 @@ V2 of my portfolio site, built with [Astro](https://astro.build/) to incorporate
 - [ ] SEO improvements with blog/project tags  
 
 ## 📝 License  
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](LICENSE).  
