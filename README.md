@@ -1,53 +1,33 @@
-# Portfolio V2
+# Portfolio V2 🚀  
 
-V2 of my portfolio site is built with astro because I wanted to incorporate a blog alongside it, and do a major redesign since the last one was neither responsive, nor accessible, nor pretty to look at.
+V2 of my portfolio site, built with [Astro](https://astro.build/) to incorporate a blog and a major redesign. The previous version lacked responsiveness, accessibility, and aesthetics—so I started fresh.  
 
-So I will gut pretty much the whole site barring the HTML, and start from there. 
+## 🚧 Tech Stack  
+- **Framework:** Astro  
+- **Styling:** Tailwind CSS  
+- **Language:** JavaScript  
 
-Built, with Love, on Astro
-
----
-## project structure: 
-#### and brief explanations (where necessary)
-```.
-├── public
-│   ├── icons
-│   ├── images
-│   └── logo.ico
-└── src
-    ├── components
-    │   ├── aside.astro
-    │   ├── career-card.astro
-    │   ├── career-card-points.astro
-    │   ├── footer.astro
-    │   ├── icon.astro
-    │   ├── project-card.astro
-    │   ├── techstack.astro
-    │   ├── title.astro
-    │   └── writing-card.astro
-    ├── content
-    │   ├── career
-    │   ├── projects
-    │   └── writing
-    ├── layouts
-    │   └── base.astro
-    ├── pages
-    │   ├── career.astro
-    │   ├── index.astro
-    │   ├── projects.astro
-    │   └── writing
-    │       ├── index.astro
-    │       └── [post].astro
-    └── styles
-        └── global.css
-
-14 directories, 47 files
+## 📂 Project Structure  
 ```
-### todo:
-- [ ] add an rss feed. 
-- [ ] style for mobile
-- [ ] introduce giscus from this: <https://danidiaztech.com/integrate-astro-giscus/>
-- [ ] sort the career and project cards by date just like the blog (aka take care of the frontmatter and sorting...)
-### potential new features to consider:
-- [ ] search across blogs: <https://danidiaztech.com/create-astro-search-component/>
-- [ ] tags for blogs and projects to improve seo
+.
+├── public          # Static assets (icons, images, favicon)
+└── src
+    ├── components # Reusable UI components
+    ├── content    # Blog posts, projects, and career entries
+    ├── layouts    # Base layouts for pages
+    ├── pages      # Main site pages
+    ├── styles     # Global styles
+```
+
+## ✅ TODO  
+- [ ] Add an RSS feed  
+- [ ] Improve mobile styling  
+- [ ] Integrate Giscus for comments ([guide](https://danidiaztech.com/integrate-astro-giscus/))  
+- [ ] Sort career and project cards by date  
+
+## 🔍 Potential Features  
+- [ ] Search across blogs ([reference](https://danidiaztech.com/create-astro-search-component/))  
+- [ ] SEO improvements with blog/project tags  
+
+## 📝 License  
+This project is licensed under the [MIT License](LICENSE).
