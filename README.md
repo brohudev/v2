@@ -23,7 +23,7 @@ V2 of my portfolio site, built with [Astro](https://astro.build/) to incorporate
 
 ### Prerequisites  
 - [Node.js](https://nodejs.org/) (LTS recommended)  
-- [PNPM](https://pnpm.io/) (or use npm/yarn)  
+- [NPM](https://npmjs.com/) (or use pnpm/yarn idk you do you)  
 
 ### Steps  
 1. Clone the repository:  
