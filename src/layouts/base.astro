@@ -21,7 +21,7 @@ const { pageName, pageColor } = Astro.props;
         <!--wrapper -->
         <div class="lg:max-w-[900px] flex flex-grow flex-col lg:flex-row lg:my-32  my-20 mx-[10vw] md:mx[30vw] lg:mx-auto">
             <!-- Aside Component -->
-            <div class="flex flex-col bg-Base lg:w-[200px] flex-shrink-0"> <Aside activePage={pageName} /> </div>
+            <div class="flex flex-col bg-Base lg:w-[200px] flex-shrink-0"> <Aside client:load activePage={pageName} /> </div>
             <!-- Main container -->
                 <div class="flex flex-col lg:gap-[25px] w-full lg:w-[575px]">
                     <Title page={pageName} Color={pageColor} />

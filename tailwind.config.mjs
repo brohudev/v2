@@ -27,6 +27,20 @@ export default {
 			fontFamily: {
 				outfit: ['Outfit', 'sans-serif'],
 			},
+			keyframes: {
+				fadeIn: {
+					'0%': { opacity: '0' },
+					'100%': { opacity: '1' },
+				},
+				fadeInDown: {
+					'0%': { opacity: '0', transform: 'translateY(-10px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' },
+				},
+			},
+			animation: {
+				fadeIn: 'fadeIn 200ms ease-in-out forwards',
+				fadeInDown: 'fadeInDown 200ms ease-in-out forwards',
+			},
 		},
 	},
 	plugins: [
