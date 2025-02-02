@@ -8,7 +8,7 @@ export default {
 				Overlay: '#26233A',
 				Text: '#E0DEF4',
 				Iris: '#C4A7E7',
-				Surgace: '#1F1D2E',
+				Surface: '#1F1D2E',
 				Muted: '#6E6A86',
 				Subtle: '#6E6A86',
 				Love: '#EB6F92',
@@ -19,10 +19,13 @@ export default {
 				HighlightLow: '#21202e',
 				HighlightMed: '#403D52',
 				HighlightHigh: '#524F67',
-
+				About: '#EB6F92',
+				Projects: '#f6c177',
+				Career: '#31748F',
+				Writing: '#C4A7E7',
 			},
 			fontFamily: {
-				outfit: ['Outfit', 'sans-serif'], // Define Outfit as a custom font
+				outfit: ['Outfit', 'sans-serif'],
 			},
 		},
 	},

@@ -1,6 +1,63 @@
 import Icon from './react-icon';
+import { useState } from 'react';
+const navItems = [
+	{ name: 'About', href: '/', icon: 'home', color: 'Love' },
+	{ name: 'Career', href: '/career', icon: 'career', color: 'Pine' },
+	{ name: 'Projects', href: '/projects', icon: 'projects', color: 'Gold' },
+	{ name: 'Writing', href: '/writing', icon: 'writing', color: 'Iris' },
+	{ name: 'Resume', href: 'https://raw.githubusercontent.com/brohudev/resume/refs/heads/main/Hitarth%20Thanki.pdf', icon: 'resume', color: 'Rose', external: true, },
+];
 
 const Aside = ({ activePage }) => {
+	return (
+		<>
+			{/* Mobile navigation: visible on screens smaller than sm */}
+			<div className="block max-lg:block lg:hidden">
+				<MobileNav activePage={activePage} />
+			</div>
+
+			{/* Desktop navigation: hidden on small screens and visible on sm and larger */}
+			<div className="hidden lg:block">
+				<DesktopNav activePage={activePage} />
+			</div>
+		</>
+	);
+};
+
+export default Aside;
+
+
+const MobileNav = ({ activePage }) => {
+	const defaultPage = activePage === '' ? 'About' : activePage;
+	const activeItem = navItems.find(item => item.name === defaultPage);
+	const iconName = activePage === '' ? 'home' : activePage.toLowerCase();
+
+	return (<div className='flex flex-col items-center lg:hidden gap-2'>
+		<div className="mb-[25px]"> <img src="/images/hitarth.jpeg" alt="Profile Picture" className="pfp w-[150px] h-[150px] rounded-[10px]" /> </div>
+		<div className="mobile-nav flex w-full gap-2">
+			<button
+				onClick={() =>
+					window.open(
+						'https://raw.githubusercontent.com/brohudev/resume/refs/heads/main/Hitarth%20Thanki.pdf',
+						'_blank'
+					)
+				}
+				className="flex-1 flex items-center justify-center px-4 py-3 bg-Overlay rounded-lg text-Rose border border-Rose hover:border-trasparent hover:bg-Rose hover:text-Overlay transition-all duration-300"
+			>
+				<Icon icon="resume" className="h-6 w-6 fill-current" />
+				<span className="text-xl font-normal ml-2">Resume</span>
+			</button>
+
+			<button className={`flex-1 flex items-center justify-center px-4 py-3 bg-Overlay rounded-lg text-${activeItem?.color} border border-${activeItem?.color} transition-all duration-300 hover:border-${activeItem?.color} hover:bg-${activeItem?.color} hover:text-Overlay `}>
+				<Icon icon={iconName} className="h-6 w-6 fill-current" />
+
+				<span className="text-xl font-normal ml-2">{activeItem.name}</span>
+			</button>
+		</div>
+	</div>);
+};
+
+const DesktopNav = ({ activePage }) => {
 	console.log('Active Page:', activePage, '|');
 
 	return (
@@ -62,6 +119,3 @@ const Aside = ({ activePage }) => {
 		</>
 	);
 };
-
-export default Aside;
-
