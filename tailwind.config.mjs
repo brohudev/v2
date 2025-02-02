@@ -12,7 +12,7 @@ export default {
 				Muted: '#6E6A86',
 				Subtle: '#6E6A86',
 				Love: '#EB6F92',
-				Gold: '#F6C177',
+				Gold: '#f6c177',
 				Rose: '#EBBCBA',
 				Pine: '#31748F',
 				Foam: '#9CCFD8',
