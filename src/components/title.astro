@@ -8,5 +8,5 @@ const { page, Color } = Astro.props;
 const title = page ? `~/HITARTH THANKI/${page}` : "~/HITARTH THANKI";
 ---
 <div class={`title-bar`}>
-    <span class={`title-text font-[Outfit] text-[36px] font-semibold leading-[20px] ${Color}`}>{title}</span>
+    <span class={`hidden lg:block lg:title-text lg:font-[Outfit] lg:text-[36px] lg:font-semibold lg:leading-[20px] ${Color}`}>{title}</span>
 </div>

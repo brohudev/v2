@@ -19,7 +19,7 @@ import BulletPoints from './career-card-points.astro';
       <div class="everything-but-the-group-icon group flex items-center gap-6">
         <!-- card pfp svg -->
         <div class="career-card-pfp h-[50px] w-[50px] text-HighlightMed group-hover:text-Pine">
-          <Icon icon={`${icon}`} className="h-[50px] w-[50px] fill-current" />
+            <!-- <Icon icon={`${icon}`} className="h-[50px] w-[50px] fill-current" /> -->
         </div>
         <!-- card text -->
         <div class="career-card-text text-HighlightMed group-hover:text-Iris flex flex-col w-[250px] items-start gap-0">
@@ -34,7 +34,7 @@ import BulletPoints from './career-card-points.astro';
         </div>
       </div>
       <div class="w-[37px] h-[37px] text-HighlightMed group-hover:text-Pine flex">
-        <Icon icon={`${groupIcon}`} className="w-[37px] h-[37px] fill-current" />
+          <!-- <Icon icon={`${groupIcon}`} className="w-[37px] h-[37px] fill-current" /> -->
       </div>
     </div>
 

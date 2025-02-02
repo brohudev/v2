@@ -32,9 +32,13 @@ const MobileNav = ({ activePage }) => {
 	const activeItem = navItems.find(item => item.name === defaultPage);
 	const iconName = activePage === '' ? 'home' : activePage.toLowerCase();
 
-	return (<div className='flex flex-col items-center lg:hidden gap-2'>
-		<div className="mb-[25px]"> <img src="/images/hitarth.jpeg" alt="Profile Picture" className="pfp w-[150px] h-[150px] rounded-[10px]" /> </div>
-		<div className="mobile-nav flex w-full gap-2">
+	return (<div className='flex flex-col items-center lg:hidden gap-[25px] mb-10'>
+
+		<div > <img src="/images/hitarth.jpeg" alt="Profile Picture" className="pfp w-[150px] h-[150px] rounded-[10px]" /> </div>
+
+		<span className={`text-${activeItem.color} text-[36px] font-semibold leading-[20px]`}> ~/Hitarth Thanki</span>
+
+		<div className="mobile-nav flex w-full gap-[5vw]">
 			<button
 				onClick={() =>
 					window.open(
@@ -42,13 +46,13 @@ const MobileNav = ({ activePage }) => {
 						'_blank'
 					)
 				}
-				className="flex-1 flex items-center justify-center px-4 py-3 bg-Overlay rounded-lg text-Rose border border-Rose hover:border-trasparent hover:bg-Rose hover:text-Overlay transition-all duration-300"
+				className="flex-1 flex items-center justify-center px-4 py-3 bg-Overlay rounded-xl text-Rose border border-Rose hover:border-trasparent hover:bg-Rose hover:text-Overlay transition-all duration-300"
 			>
 				<Icon icon="resume" className="h-6 w-6 fill-current" />
 				<span className="text-xl font-normal ml-2">Resume</span>
 			</button>
 
-			<button className={`flex-1 flex items-center justify-center px-4 py-3 bg-Overlay rounded-lg text-${activeItem?.color} border border-${activeItem?.color} transition-all duration-300 hover:border-${activeItem?.color} hover:bg-${activeItem?.color} hover:text-Overlay `}>
+			<button className={`flex-1 flex items-center justify-center px-4 py-3 bg-Overlay rounded-xl text-${activeItem?.color} border border-${activeItem?.color} transition-all duration-300 hover:border-${activeItem?.color} hover:bg-${activeItem?.color} hover:text-Overlay `}>
 				<Icon icon={iconName} className="h-6 w-6 fill-current" />
 
 				<span className="text-xl font-normal ml-2">{activeItem.name}</span>
@@ -58,8 +62,6 @@ const MobileNav = ({ activePage }) => {
 };
 
 const DesktopNav = ({ activePage }) => {
-	console.log('Active Page:', activePage, '|');
-
 	return (
 		<>
 			<div className="mb-[25px]">
