@@ -1,34 +1,77 @@
 ---
-//the icon svg code is from Google's material Icons pack avaiable for download on Figma at https://www.figma.com/community/file/1014241558898418245
+import { useState } from 'react';
 import Icon from './icon.astro';
+
+const { pageName } = Astro.props; // Page name passed to the component
+let activePage = pageName || 'home'; // default to 'home' if no page is passed
 ---
+
 <nav class="taskbar flex flex-col items-center">
     <!-- Profile Picture -->
     <div class="mb-[25px]">
-        <img src="/images/hitarth.jpeg" alt="Profile Picture" class="pfp w-[150px] h-[150px] rounded-[10px]">
+        <img src="/images/hitarth.jpeg" alt="Profile Picture" class="pfp w-[150px] h-[150px] rounded-[10px]" />
     </div>
 
-    <!-- Buttons -->
-    <div class="flex flex-col gap-[25px]">
+    <!-- Mobile Hamburger Menu -->
+    <div class="md:hidden w-full flex justify-center mb-[25px]">
+        <button class="w-[50px] h-[50px] flex items-center justify-center bg-Overlay rounded-[10px]" onclick="toggleMenu()">
+            <Icon icon="writing" className="w-[25px] h-[25px] fill-current" />
+        </button>
+    </div>
+
+    <!-- Collapsible Menu for Mobile -->
+    <div id="mobile-menu" class="w-full flex flex-col items-center gap-[25px] hidden">
         <a href="/" class="taskbar-link w-[150px] h-[50px] rounded-[10px] bg-Overlay text-center flex items-center justify-center gap-2 text-Iris transition-all duration-300 ease-in-out hover:bg-Love hover:text-Overlay">
-            <Icon icon="home" className="h-[25px] w-[25px] fill-current" />
+            <Icon icon="home" class="h-[25px] w-[25px] fill-current" />
             <span class="text-[20px] font-normal leading-[20px]">Home</span>
         </a>
         <a href="/career" class="taskbar-link w-[150px] h-[50px] rounded-[10px] bg-Overlay text-center flex items-center justify-center gap-2 text-Iris transition-all duration-300 ease-in-out hover:bg-Pine hover:text-Overlay">
-            <Icon icon="career" className="h-[25px] w-[25px] fill-current" />
+            <Icon icon="career" class="h-[25px] w-[25px] fill-current" />
             <span class="text-[20px] font-normal leading-[20px]">Career</span>
         </a>
-           <a href="/projects" class="taskbar-link w-[150px] h-[50px] rounded-[10px] bg-Overlay text-center flex items-center justify-center gap-2 text-Iris transition-all duration-300 ease-in-out hover:bg-Gold hover:text-Overlay">
-            <Icon icon="projects" className="h-[25px] w-[25px] fill-current" />
+        <a href="/projects" class="taskbar-link w-[150px] h-[50px] rounded-[10px] bg-Overlay text-center flex items-center justify-center gap-2 text-Iris transition-all duration-300 ease-in-out hover:bg-Gold hover:text-Overlay">
+            <Icon icon="projects" class="h-[25px] w-[25px] fill-current" />
             <span class="text-[20px] font-normal leading-[20px]">Projects</span>
         </a>
         <a href="/writing" class="taskbar-link w-[150px] h-[50px] rounded-[10px] bg-Overlay text-center flex items-center justify-center gap-2 text-Iris transition-all duration-300 ease-in-out hover:bg-Iris hover:text-Overlay">
-           <Icon icon="writing" className="h-[25px] w-[25px] fill-current" />
-           <span class="text-[20px] font-normal leading-[20px]">Writing</span>
+            <Icon icon="writing" class="h-[25px] w-[25px] fill-current" />
+            <span class="text-[20px] font-normal leading-[20px]">Writing</span>
         </a>
         <a href="https://raw.githubusercontent.com/brohudev/resume/refs/heads/main/Hitarth%20Thanki.pdf" target="_blank" rel="noopener noreferrer" class="taskbar-link w-[150px] h-[50px] rounded-[10px] bg-Overlay text-center flex items-center justify-center gap-2 text-Rose transition-all duration-300 ease-in-out hover:bg-Rose hover:text-Overlay">
-           <Icon icon="resume" className="h-[25px] w-[25px] fill-current" />
-           <span class="text-[20px] font-normal leading-[20px]">Resume</span>
+            <Icon icon="resume" class="h-[25px] w-[25px] fill-current" />
+            <span class="text-[20px] font-normal leading-[20px]">Resume</span>
+        </a>
+    </div>
+
+    <!-- Desktop Menu (unchanged) -->
+    <div class="hidden md:flex flex-col gap-[25px]">
+        <a href="/" class="taskbar-link w-[150px] h-[50px] rounded-[10px] bg-Overlay text-center flex items-center justify-center gap-2 text-Iris transition-all duration-300 ease-in-out hover:bg-Love hover:text-Overlay">
+            <Icon icon="home" class="h-[25px] w-[25px] fill-current" />
+            <span class="text-[20px] font-normal leading-[20px]">Home</span>
+        </a>
+        <a href="/career" class="taskbar-link w-[150px] h-[50px] rounded-[10px] bg-Overlay text-center flex items-center justify-center gap-2 text-Iris transition-all duration-300 ease-in-out hover:bg-Pine hover:text-Overlay">
+            <Icon icon="career" class="h-[25px] w-[25px] fill-current" />
+            <span class="text-[20px] font-normal leading-[20px]">Career</span>
+        </a>
+        <a href="/projects" class="taskbar-link w-[150px] h-[50px] rounded-[10px] bg-Overlay text-center flex items-center justify-center gap-2 text-Iris transition-all duration-300 ease-in-out hover:bg-Gold hover:text-Overlay">
+            <Icon icon="projects" class="h-[25px] w-[25px] fill-current" />
+            <span class="text-[20px] font-normal leading-[20px]">Projects</span>
+        </a>
+        <a href="/writing" class="taskbar-link w-[150px] h-[50px] rounded-[10px] bg-Overlay text-center flex items-center justify-center gap-2 text-Iris transition-all duration-300 ease-in-out hover:bg-Iris hover:text-Overlay">
+            <Icon icon="writing" class="h-[25px] w-[25px] fill-current" />
+            <span class="text-[20px] font-normal leading-[20px]">Writing</span>
+        </a>
+        <a href="https://raw.githubusercontent.com/brohudev/resume/refs/heads/main/Hitarth%20Thanki.pdf" target="_blank" rel="noopener noreferrer" class="taskbar-link w-[150px] h-[50px] rounded-[10px] bg-Overlay text-center flex items-center justify-center gap-2 text-Rose transition-all duration-300 ease-in-out hover:bg-Rose hover:text-Overlay">
+            <Icon icon="resume" class="h-[25px] w-[25px] fill-current" />
+            <span class="text-[20px] font-normal leading-[20px]">Resume</span>
         </a>
     </div>
 </nav>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("mobile-menu");
+    menu.classList.toggle("hidden");
+  }
+</script>
+
