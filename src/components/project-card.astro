@@ -3,32 +3,39 @@ const { title, github, demo, image, technologies, tagline } = Astro.props;
 let expanded = false;
 import Icon from './icon.astro'
 ---
-<!-- Card Container -->
-<div class="group transition-all duration-300 ease-in-out flex h-[150px] p-[15px] flex-col justify-center items-center gap-[10px] flex-shrink-0 self-stretch border border-HighlightMed hover:border-Gold rounded-xl">
-  <!-- content container -->
-  <div class="flex items-center gap-[20px] flex-[1_0_0] self-stretch">
-    <!-- pfp container -->
-    <div class=""> <img src=`${image}` alt="A cute pfp of the project :D" class="max-w-none w-[120px] h-[120px] rounded-[10px]" /></div>
-
-    <!-- deets container -->
-    <div class="flex w-[350px] flex-col items-start gap-[25px]">
-      <!-- text container -->
-      <div class="flex h-[70px] flex-col items-center gap-1 self-stretch transition-all duration-300 ease-in-out">
-        <div class="flex h-[21px] flex-col justify-center flex-shrink-0 self-stretch text-Subtle group-hover:text-Gold font-Outfit text-[20px] font-semibold leading-[20px] transition-all duration-300 ease-in-out"> {title} </div>
-        <div class="flex transition-all duration-300 ease-in-out h-[45px] flex-col justify-start self-stretch text-HighlightMed group-hover:text-Iris font-Outfit text-[15px] font-normal leading-[22.5px] text-ellipsis">{tagline}</div>
-
+<div class="group transition-all duration-300 ease-in-out flex lg:min-h-[150px] p-2 lg:p-4 flex-row lg:gap-[10px] self-stretch border lg:border-HighlightMed border-Gold lg:hover:border-Gold rounded-xl">
+  <div class="flex flex-row items-center gap-2 w-full">
+    <!-- Image -->
+    <div class="flex-shrink-0">
+      <img src={image} alt="Project preview" class="w-20 h-20 lg:w-[120px] lg:h-[120px] rounded-[10px] object-cover" />
+    </div>
+    
+    <!-- Details -->
+    <div class="flex flex-col items-start gap-4 flex-1 min-w-0 w-full sm:w-auto">
+      <div class="flex flex-col gap-1 w-full">
+        <div class="transition-all duration-300 ease-in-out text-Gold lg:text-Subtle group-hover:text-Gold font-Outfit text-md lg:text-lg font-bold truncate">
+          {title}
+        </div>
+        <div class="transition-all duration-300 ease-in-out text-Iris lg:text-HighlightMed group-hover:text-Iris font-Outfit text-sm line-clamp-2 truncate">
+          {tagline}
+        </div>
       </div>
-      <!-- technologies container -->
-      <div class="flex flex-row text-Subtle"> {technologies.map((tech) => ( <Icon icon={tech} class="fill-current w-[25px] h-[25px]" /> ))}
-      <!-- insert a list of icons here -->
+      
+      <div class="flex flex-row gap-2 text-Subtle">
+        {technologies.map((tech) => (
+          <Icon icon={tech} class="fill-current w-6 h-6" />
+        ))}
       </div>
     </div>
 
-    <!-- gh/demo container -->
-    <div class="transition-all duration-300 ease-in-out text-HighlightMed group-hover:text-Gold flex w-[25px] flex-col justify-center items-center gap-[37px] self-stretch">
-      <!-- only show the button if it isnt '' in the metadata: -->
-      <a href="/" title="Live Demo."> <Icon icon="demo" classname="fill-current transition-all duration-300 ease-in-out"/> </a>
-      <a href=`${github}` title="Github Link">  <Icon icon="gh" classname="fill-current transition-all duration-300 ease-in-out" /> </a>
-    </div
+    <!-- Links -->
+    <div class="transition-all duration-300 ease-in-out flex flex-col justify-center gap-4 text-HighlightMed group-hover:text-Gold">
+      {demo && <a href="/" title="Live Demo" class="flex-shrink-0">
+        <Icon icon="demo" classname="fill-current w-8 h-8 lg:w-6 lg:h-6" />
+      </a>}
+      <a href={github} title="Github Link" class="flex-shrink-0">
+        <Icon icon="gh" classname="fill-current w-6 h-6" />
+      </a>
+    </div>
   </div>
 </div>
