@@ -33,7 +33,7 @@ const MobileNav = ({ activePage }) => {
 				<div className="flex w-full gap-4">
 					{/* Resume Button */}
 					<button onClick={() => window.open('https://resume.hitarth.dev', '_blank')}
-						className="flex-1 flex items-center justify-center px-4 h-12 bg-Overlay rounded-xl text-Rose border border-Rose hover:border-transparent hover:bg-Rose hover:text-Overlay transition-all duration-300" >
+						className="flex-1 flex items-center justify-center px-4 h-12 bg-Surface rounded-xl text-Rose border border-Rose hover:border-transparent hover:bg-Rose hover:text-Surface transition-all duration-300" >
 
 						<Icon icon="resume" className="h-6 w-6 fill-current" />
 						<span className="text-xl font-normal ml-2">Resume</span>
@@ -69,7 +69,7 @@ const NavBar = ({ activePage, activeItem, iconName }) => {
 					<nav className="bg-base rounded-lg flex flex-col gap-2">
 						{navItems.filter(item => item.name !== activeItem.name).map((item) => (
 							<a key={item.name} href={item.href}
-								className={` flex items-center justify-center px-4 h-12 bg-Overlay rounded-xl text-${item.color} border border-${item.color} transition-all duration-300 hover:border-${item.color} hover:bg-${item.color} hover:text-Overlay`}
+								className={` flex items-center justify-center px-4 h-12 bg-Surface rounded-xl text-${item.color} border border-${item.color} transition-all duration-300 hover:border-${item.color} hover:bg-${item.color} hover:text-Surface`}
 								{...(item.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
 								onClick={() => setIsOpen(false)} >
 								<Icon icon={item.icon} className="h-6 w-6 fill-current" />
@@ -98,7 +98,7 @@ const DesktopNav = ({ activePage }) => {
 			<div className="hidden md:flex flex-col gap-6">
 				<a
 					href="/"
-					className={`taskbar-link w-36 h-12 rounded-lg bg-Overlay text-center flex items-center justify-center gap-2 text-Iris transition-all duration-300 ease-in-out hover:bg-Love hover:text-Overlay ${activePage === '' ? 'border border-Love text-Love' : ''
+					className={`taskbar-link w-36 h-12 rounded-lg text-center flex items-center justify-center gap-2 text-Iris transition-all duration-300 ease-in-out hover:bg-Love hover:text-Surface ${activePage === '' ? 'border bg-Overlay border-Love text-Love' : 'bg-Surface '
 						}`}
 				>
 					<Icon icon="home" className="h-6 w-6 fill-current" />
@@ -107,7 +107,7 @@ const DesktopNav = ({ activePage }) => {
 
 				<a
 					href="/career"
-					className={`taskbar-link w-36 h-12 rounded-lg bg-Overlay text-center flex items-center justify-center gap-2 text-Iris transition-all duration-300 ease-in-out hover:bg-Pine hover:text-Overlay ${activePage === 'Career' ? 'border border-Pine text-Pine' : ''
+					className={`taskbar-link w-36 h-12 rounded-lg  text-center flex items-center justify-center gap-2 text-Iris transition-all duration-300 ease-in-out hover:bg-Pine hover:text-Surface ${activePage === 'Career' ? 'border border-Pine bg-Overlay text-Pine' : 'bg-Surface'
 						}`}
 				>
 					<Icon icon="career" className="h-6 w-6 fill-current" />
@@ -116,7 +116,7 @@ const DesktopNav = ({ activePage }) => {
 
 				<a
 					href="/projects"
-					className={`taskbar-link w-36 h-12 rounded-lg bg-Overlay text-center flex items-center justify-center gap-2 transition-all duration-300 ease-in-out hover:bg-Gold hover:text-Overlay ${activePage === 'Projects' ? 'border border-Gold text-Gold' : 'text-Iris'}`}
+					className={`taskbar-link w-36 h-12 rounded-lg text-center flex items-center justify-center gap-2 transition-all duration-300 ease-in-out hover:bg-Gold hover:text-Surface ${activePage === 'Projects' ? 'border border-Gold bg-Overlay text-Gold' : 'text-Iris bg-Surface '}`}
 				>
 					<Icon icon="projects" className="h-6 w-6 fill-current" />
 					<span className="text-xl font-normal leading-5">Projects</span>
@@ -124,7 +124,7 @@ const DesktopNav = ({ activePage }) => {
 
 				<a
 					href="/writing"
-					className={`taskbar-link w-36 h-12 rounded-lg bg-Overlay text-center flex items-center justify-center gap-2 text-Iris transition-all duration-300 ease-in-out hover:bg-Iris hover:text-Overlay ${activePage === 'Writing' ? 'border border-Iris text-Iris' : ''
+					className={`taskbar-link w-36 h-12 rounded-lg text-center flex items-center justify-center gap-2 text-Iris transition-all duration-300 ease-in-out hover:bg-Iris hover:text-Surface ${activePage === 'Writing' ? 'border bg-Overlay border-Iris text-Iris' : ' bg-Surface '
 						}`}
 				>
 					<Icon icon="writing" className="h-6 w-6 fill-current" />
@@ -135,7 +135,7 @@ const DesktopNav = ({ activePage }) => {
 					href="https://resume.hitarth.dev"
 					target="_blank"
 					rel="noopener noreferrer"
-					className={`taskbar-link w-36 h-12 rounded-lg bg-Overlay text-center flex items-center justify-center gap-2 text-Rose transition-all duration-300 ease-in-out hover:bg-Rose hover:text-Overlay `}
+					className={`taskbar-link w-36 h-12 rounded-lg bg-Surface text-center flex items-center justify-center gap-2 text-Rose transition-all duration-300 ease-in-out hover:bg-Rose hover:text-Surface `}
 				>
 					<Icon icon="resume" className="h-6 w-6 fill-current" />
 					<span className="text-xl font-normal leading-5">Resume</span>

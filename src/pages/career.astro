@@ -1,7 +1,7 @@
 ---
 import Base from '../layouts/base.astro';
 import Card from '../components/career-card.astro';
-//import HireMe from '../components/hireme.astro';
+import HireMe from '../components/hireme.astro';
 const careerFiles = import.meta.glob('../content/career/*.md');
 
 const careers = await Promise.all(
@@ -16,7 +16,7 @@ const careers = await Promise.all(
 ---
 
 <Base pageName="Career" pageColor="text-Pine">
-  <!-- <HireMe /> -->
+    <HireMe />
     {careers.map((career) => (
     <Card 
         position={career.position} 

@@ -4,25 +4,25 @@ const { position, company, fromDate, toDate, careerType, icon, description, loca
 import Icon from './icon.astro';
 import BulletPoints from './career-card-points.astro';
 ---
-<div class="group hover:border-Pine rounded-xl border border-HighlightMed bg-Base flex flex-col lg:flex-row px-3.5 py-4 mb-8 gap-4 w-full">
+<div class="group lg:hover:border-Pine rounded-xl border border-Pine lg:border-HighlightMed bg-Base flex flex-col lg:flex-row lg:px-3.5 px-2.5 py-2 lg:py-4 mb-4 lg:mb-8 gap-4 w-full">
   <div class="content-container flex-1 min-w-0">
-    <div class="career-card-content flex flex-col lg:flex-row gap-4 lg:items-center">
-      <div class="flex items-start lg:items-center gap-4 flex-1 min-w-0">
-        <div class="career-card-pfp h-[50px] w-[50px] flex-shrink-0 text-HighlightMed group-hover:text-Pine">
-          <Icon icon={`${icon}`} className="h-[50px] w-[50px] fill-current" />
+    <div class="career-card-content flex flex-col lg:flex-row gap-2 lg:gap-4 lg:items-center">
+      <div class="flex items-start items-center gap-3 lg:gap-4 flex-1 min-w-0">
+        <div class="career-card-pfp lg:h-[50px] lg:w-[50px] flex-shrink-0 lg:text-HighlightMed text-Pine lg:group-hover:text-Pine">
+          <Icon icon={`${icon}`} className="w-[25px] h-[25px] lg:h-[50px] lg:w-[50px] fill-current" />
         </div>
         
-        <div class="career-card-text text-HighlightMed group-hover:text-Iris flex flex-col min-w-0 flex-1">
-          <div class="font-Outfit text-[16px] font-light truncate">
+        <div class="career-card-text text-Iris lg:text-HighlightMed lg:group-hover:text-Iris flex flex-col min-w-0 flex-1">
+          <div class="font-Outfit text-sm lg:text-[16px] font-light truncate">
             {fromDate} - {toDate}
           </div>
-          <div class="text-HighlightMed text-lg group-hover:text-Pine font-bold truncate">{position}</div>
-          <div class="truncate text-Muted">{company}</div>
-          <div class="truncate text-Subtle">{location}</div>
+          <div class="lg:text-HighlightMed lg:text-md text-Pine lg:text-lg lg:group-hover:text-Pine font-bold truncate">{position}</div>
+          <div class="truncate text-sm text-Muted">{company}</div>
+          <div class="truncate text-sm text-Subtle">{location}</div>
         </div>
         
-        <div class="w-[37px] h-[37px] flex-shrink-0 text-HighlightMed group-hover:text-Pine">
-          <Icon icon={`${groupIcon}`} className="w-[37px] h-[37px] fill-current" />
+        <div class="lg:w-[37px] lg:h-[37px] w-[25px] h-[25px]  flex-shrink-0 text-Pine lg:text-HighlightMed lg:group-hover:text-Pine gap-0 m-0 p-0">
+          <Icon icon={`${groupIcon}`} className="w-[25px] h-[25px] lg:w-[37px] lg:h-[37px] fill-current" />
         </div>
       </div>
     </div>
