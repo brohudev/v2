@@ -7,6 +7,6 @@ technologies:
   - react
   - openai
   - tailwind
-  - cloudflare
+  - js
 tagline: "AI-powered educational space game chatbot."
 ---
