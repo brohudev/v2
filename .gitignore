@@ -25,3 +25,6 @@ pnpm-debug.log*
 
 # obsidian garbaage
 .obsidian/
+
+# ignore my drafts:
+**/drafts/
