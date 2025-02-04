@@ -21,7 +21,7 @@ import Icon from './icon.astro'
         </div>
       </div>
       
-      <div class="flex flex-row gap-2 text-Subtle">
+      <div class="flex flex-row gap-2 text-Subtle group-hover:text-Iris transition-all duration-300 ease-in-out ">
         {technologies.map((tech) => (
           <Icon icon={tech} class="fill-current w-6 h-6" />
         ))}
@@ -30,10 +30,10 @@ import Icon from './icon.astro'
 
     <!-- Links -->
     <div class="transition-all duration-300 ease-in-out flex flex-col justify-center gap-5 text-Gold lg:text-HighlightMed group-hover:text-Gold">
-      {demo && <a href="/" title="Live Demo" class="flex-shrink-0">
+      {demo && <a href={demo} target="_blank" rel="noopener noreferrer" title="Live Demo" class="flex-shrink-0">
         <Icon icon="demo" classname="fill-current w-8 h-8 lg:w-6 lg:h-6" />
       </a>}
-      {github && <a href={github} title="Github Link" class="flex-shrink-0">
+      {github && <a href={github} target="_blank" rel="noopener noreferrer" title="Github Link" class="flex-shrink-0">
         <Icon icon="gh" classname="fill-current w-6 h-6" />
       </a>}
     </div>
