@@ -10,7 +10,7 @@ I am using this blog post to adjust the styling on my site to match the obsidian
 #### Heading level 4
 
 This is a paragraph with **bold text**, *italic text*, and `inline code`. `this is code` **the is bold** _this is italic_  
-asdfjahsdfkjhaskdjfhaskdhfkajsdhf
+
 ## Lists
 
 ### Ordered List
