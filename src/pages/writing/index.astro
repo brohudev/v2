@@ -4,12 +4,15 @@ import Base from '../../layouts/base.astro';
 import Card from '../../components/writing-card.astro';
 
 const allWritingPosts = await getCollection('writing');
+const sortedPosts = allWritingPosts.sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime()
+);
 
 ---
 
 <Base pageName="Writing" pageColor="text-Iris">
  <div class="w-full grid grid-cols-1 gap-6">
-   {allWritingPosts.map((post) => (
+   {sortedPosts.map((post) => (
      <a href={`/writing/${post.id}`} class="block">
        <Card 
          title={post.data.title} 

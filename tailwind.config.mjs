@@ -10,7 +10,7 @@ export default {
 				Iris: '#C4A7E7',
 				Surface: '#1F1D2E',
 				Muted: '#6E6A86',
-				Subtle: '#6E6A86',
+				Subtle: '#908caa',
 				Love: '#EB6F92',
 				Gold: '#f6c177',
 				Rose: '#EBBCBA',
