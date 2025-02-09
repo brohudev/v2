@@ -26,7 +26,7 @@ const icons = {
 const typeIcon = icons[entry.data.type] || '❓';
 const parsedDate = new Date(entry.data.date);
 const formattedDate = new Intl.DateTimeFormat('en-US', {
- month: 'long',
+ month: 'short',
  day: 'numeric',
  year: 'numeric',
 }).format(parsedDate);

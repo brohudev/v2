@@ -1,7 +1,8 @@
 ---
-title: SpacedOut - a new kind of simulation
+title: Spaced Out - A New Kind of Simulation 🌌
 date: 2025-02-03
 time: 5 min
 type: blog
 ---
-introduce the roadmap for spacedout and what you intend to do with it...
+
+TL;DR: I bought a bunch of Raspberry Pi's and this is how I'm going to tinker with them, or at least that's the plan so far.
