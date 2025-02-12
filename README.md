@@ -42,12 +42,9 @@ V2 of my portfolio site, built with [Astro](https://astro.build/) to incorporate
 4. Open [http://localhost:4321](http://localhost:4321) in your browser.  
 
 ## ✅ TODO  
-- [ ] Add an RSS feed   
-- [ ] Integrate Giscus for comments ([guide](https://danidiaztech.com/integrate-astro-giscus/))  
-- [ ] git rid of navbar remount on page reload by making it `client-only:react` in the base.astro...
 
 ## 🔍 Potential Features  
 - [ ] Search across blogs ([reference](https://danidiaztech.com/create-astro-search-component/))  
 
 ## 📝 License  
-This project is licensed under the [MIT License](LICENSE).  
+This project is licensed under the [MIT License](LICENSE).
