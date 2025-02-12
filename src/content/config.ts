@@ -14,6 +14,8 @@ const writing = defineCollection({
     date: z.date(),
     time: z.string(),
     type: z.string().default("blog"),
+    tagline: z.string().default("It does exactly what it says on the tin."),
+    author: z.string().default("Hitarth Thanki"),
   }),
 });
 

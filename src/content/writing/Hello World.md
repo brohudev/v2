@@ -3,6 +3,7 @@ title: Hello World!
 date: 2025-02-07
 time: 5 min
 type: blog
+tagline: It is exactly what you expect
 ---
 
 Welcome to my corner of the internet! This site is *my space*—a place where I can share, create, and showcase all the things I’m love. Whether it’s tech, projects, or just some random musings, this is where it all comes together. Let me tell you a bit about why this site exists and what you can expect to find here.
