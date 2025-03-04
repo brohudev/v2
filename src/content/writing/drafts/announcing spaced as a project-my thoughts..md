@@ -6,4 +6,6 @@ type: blog
 tagline: IDK what I'm getting myself into here o-o
 ---
 
-TL;DR: I bought a bunch of Raspberry Pi's and this is how I'm going to tinker with them, or at least that's the plan so far.
+TL;DR: I bought a couple pc's and this is how I'm going to tinker with them, or at least that's the plan so far.
+
+the plan also includes me 

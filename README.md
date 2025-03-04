@@ -44,7 +44,9 @@ V2 of my portfolio site, built with [Astro](https://astro.build/) to incorporate
 ## ✅ TODO  
 
 ## 🔍 Potential Features  
-- [ ] Search across blogs ([reference](https://danidiaztech.com/create-astro-search-component/))  
+- [ ] Search across blogs ([reference](https://danidiaztech.com/create-astro-search-component/))
+- [ ] Sort projects by date
+- [ ] Re-style blog  
 
 ## 📝 License  
 This project is licensed under the [MIT License](LICENSE).
