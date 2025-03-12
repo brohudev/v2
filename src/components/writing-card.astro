@@ -1,7 +1,5 @@
 ---
 import { MarkdownInstance } from 'astro';
-import Icon from './icon.astro';
-import BulletPoints from './career-card-points.astro';
 
 const icons = {
   tech: '🧑‍💻',
@@ -28,7 +26,7 @@ const formattedDate = new Intl.DateTimeFormat('en-US', {
             <!-- icon here -->
             <span class="text-[20px] font-semibold leading-[20px]">{typeIcon}</span>
             <!-- title div -->
-            <div class="text-start text-center text-Iris lg:text-Subtle lg:group-hover:text-Iris transition-all ease-in-out duration-300 text-[20px] font-semibold leading-[20px] font-outfit">{title}</div> 
+            <div class="text-start text-center text-Iris lg:text-Subtle lg:group-hover:text-Iris transition-all ease-in-out duration-300 text-[16px] font-semibold leading-[20px] font-outfit">{title}</div> 
         </div>
         <!-- metadata container -->
         <div class="flex flex-col items-end">
