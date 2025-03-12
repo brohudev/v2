@@ -82,12 +82,9 @@ Even seasoned senior software engineers can't maintain peak productivity for mor
 When you feel your productivity slipping, take a break before you crash – chat with others, catch some Z's, grab a bite, or go for a quick run. These are ironically the best time to let your mind work on autopilot about the bug you're experiencing, or that new feature youre thinking of adding. 
 
 ## Final Thoughts
-Winning hackathons should be seen as a positive side effect, not the main goal. The real focus should be on pushing your limits, rapid learning, and connecting with fellow tech enthusiasts. Ironically, I've found the most success when I've let go of rigid rules and instead focused on tackling simple problems with first principles thinking and iterative ideation.
+Winning hackathons should be seen as a positive side effect, not the main goal. The real focus should be on pushing your limits, rapid learning, and connecting with fellow tech enthusiasts. 
 
-
-Winning at Hackathons is a positive externality. The focus of going to a Hackathon should ideally be about pushing your limit, rapid learning, and connecting with others who also share your passion for building and creating solutions to problems.
-
-Ironically, I've won awards when I have let go of hard and fast rules and instead focused on a simple problem and iterate on the idea, First Principles style.
+Ironically, I've found the most success when I've let go of rigid rules and instead focused on tackling simple problems with first principles thinking and iterative ideation.
 
 ## whats next for me;
 - HackKU (April 2025)
