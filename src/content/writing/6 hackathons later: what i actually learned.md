@@ -85,9 +85,9 @@ When you feel your productivity slipping, take a break before you crash – chat
 Winning hackathons should be seen as a positive side effect, not the main goal. The real focus should be on pushing your limits, rapid learning, and connecting with fellow tech enthusiasts. Ironically, I've found the most success when I've let go of rigid rules and instead focused on tackling simple problems with first principles thinking and iterative ideation.
 
 
-Winning at Hackathons is a positive externality. The focus of going to a Hackathon should ideally be about pushing your limits in some capacity, learning rapidly, and connecting with people who share your passion for technology.
+Winning at Hackathons is a positive externality. The focus of going to a Hackathon should ideally be about pushing your limit, rapid learning, and connecting with others who also share your passion for building and creating solutions to problems.
 
-Ironically I've only won awards when I have let go of hard and fast rules and instead focused on a simple problem and iterate on the idea, complete first principles style.
+Ironically, I've won awards when I have let go of hard and fast rules and instead focused on a simple problem and iterate on the idea, First Principles style.
 
 ## whats next for me;
 - HackKU (April 2025)
